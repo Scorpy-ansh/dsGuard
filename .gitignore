@@ -70,3 +70,10 @@ Random/demo/crop.fa
 Random/demo/human.fa
 Random/demo/pollinator.fa
 Random/demo/predator.fa
+
+# Local package builds and test artifacts
+.venv-package-test/
+Random/dist/
+Random/build/
+Random/dsguard.egg-info/
+Random/package_test_out/
