@@ -1,0 +1,72 @@
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Python virtual environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+
+# Node.js dependencies and build output
+node_modules/
+frontend/node_modules/
+frontend/dist/
+
+# Local screening outputs and uploaded files
+outputs/jobs/
+backend/uploads/
+Random/demo_out/
+Random/rice_screen_test_out/
+
+# Logs
+*.log
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Credentials and secret files
+*.env
+*.env.*
+! .env.example
+atlas-credentials.env
+
+# Large raw datasets and archives
+*.fastq
+*.fastq.gz
+*.zip
+
+# Temporary and local analysis files
+*.bad
+tempCodeRunnerFile.python
+project_structure.txt
+
+# Large reference datasets
+Random/data/reference_panels/rice/rice_transcripts.fna
+
+# Root-level research data and temporary analysis files
+/*.xlsx
+/*.fastq
+/*.fastq.gz
+/*.tsv
+/*.jsonl
+/*.zip
+/*.csv
+/*.docx
+/*.fasta
+/check_fastq.py
+/inspect_fasta.py
+/dsguard_prototype.py
+
+
+Random/demo/crop.fa
+Random/demo/human.fa
+Random/demo/pollinator.fa
+Random/demo/predator.fa

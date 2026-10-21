@@ -1,0 +1,65 @@
+LOCUS       KT984797                1020 bp    mRNA    linear   INV 24-APR-2016
+DEFINITION  Nilaparvata lugens Ras superfamily small GTPase Rab7 (Rab7) mRNA,
+            complete cds.
+ACCESSION   KT984797
+VERSION     KT984797.1
+KEYWORDS    .
+SOURCE      Nilaparvata lugens (brown planthopper)
+  ORGANISM  Nilaparvata lugens
+            Eukaryota; Metazoa; Ecdysozoa; Arthropoda; Altocrustacea;
+            Allotriocarida; Hexapoda; Insecta; Pterygota; Neoptera; Eumetabola;
+            Paraneoptera; Hemiptera; Auchenorrhyncha; Delphacoidea;
+            Delphacidae; Delphacinae; Nilaparvata.
+REFERENCE   1  (bases 1 to 1020)
+  AUTHORS   Wang,W., Zhu,T., Li,K., Chen,L., Lai,F. and Fu,Q.
+  TITLE     Identification and function of 27 Ras-like family GTPases in brown
+            planthopper
+  JOURNAL   Unpublished
+REFERENCE   2  (bases 1 to 1020)
+  AUTHORS   Wang,W., Zhu,T., Li,K., Chen,L., Lai,F. and Fu,Q.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (31-OCT-2015) State Key Lab of Rice Biology, China
+            National Rice Research Institute, Tiyuchang Road 359, Hangzhou,
+            Zhejiang 310006, China
+COMMENT     ##Assembly-Data-START##
+            Assembly Method       :: SeqClean v. Lastest86_64; Newbler v.
+                                     2.5.3; Lucy v. 1.20p
+            Sequencing Technology :: 454
+            ##Assembly-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..1020
+                     /organism="Nilaparvata lugens"
+                     /mol_type="mRNA"
+                     /db_xref="taxon:108931"
+     gene            1..1020
+                     /gene="Rab7"
+                     /note="NlRab7"
+     CDS             132..752
+                     /gene="Rab7"
+                     /codon_start=1
+                     /product="Ras superfamily small GTPase Rab7"
+                     /protein_id="AMZ00349.1"
+                     /translation="MATRKKVLLKVIILGDTGVGKTSLMNQYVNKKFSNQYKATIGAD
+                     FLTKEVMVEDRIVTMQIWDTAGQERFQSLGVAFYRGADCCVLVFDMTAPSTFKSLDSW
+                     RDEFLIQASPRDPENFPIVVLGNKLDLENKAVSTKRAQQWCQSKNNIPYFETSAKEAI
+                     NVEQAFQTIARNALAQESEVELYNEFPDQIKLTQESKTPSSENCSC"
+ORIGIN      
+        1 aaagcagcaa gcactctaag cagcaaagtt tttgtagttt ctaaattcat ttagataaaa
+       61 cgccattttc tagctgtcct gagaattata gaattgaagg gagtcattat cgttatcaaa
+      121 gaaattaaag aatggcaaca aggaagaaag tgctcctgaa agtgataatc cttggtgaca
+      181 ctggagttgg caaaacatct ctcatgaacc agtatgtgaa caagaaattc tccaatcagt
+      241 acaaggctac cataggcgcc gacttcctca caaaagaagt tatggttgaa gacaggatag
+      301 tcaccatgca gatctgggac acagccggac aggagcggtt ccagtcgttg ggcgtggcgt
+      361 tctaccgagg cgccgactgc tgcgtgctcg tgttcgacat gacggcgccc agcaccttca
+      421 agtcactcga cagctggcgc gacgagttcc tcatccaggc gtcgccgcgc gaccccgaga
+      481 acttccccat tgtcgtgctc ggcaacaaac tcgatctcga gaacaaagct gtatcaacga
+      541 aacgtgccca gcagtggtgt cagagcaaaa acaacattcc ctacttcgag acgagcgcca
+      601 aagaggcgat caatgtggag caggccttcc agacgattgc acgcaacgcc ctggctcagg
+      661 agagcgaagt cgagctctac aatgagttcc cagaccagat caaacttacc caggagtcca
+      721 agacacccag ctccgagaac tgctcatgtt aacgccagtc ggttgcaatt tcaggcgatc
+      781 gtaagagaag gaatgcacca gagtataaaa aatattttat gcatgagatt gcgcgggttt
+      841 actatataca gcatgcctat ccatcacaaa gacctcaagc ccatgttatt tttgaagaag
+      901 tggtgttaat aaacactcat ttcatcagtg aaaatacaac aatggactgt gtgattctat
+      961 tttgtttatg atattgcaat atttataaga attggcatat gcccttccta cggttaggat
+//
+

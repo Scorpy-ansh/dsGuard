@@ -1,0 +1,84 @@
+LOCUS       JF915743                2119 bp    mRNA    linear   INV 21-JUN-2011
+DEFINITION  Nilaparvata lugens SID-1-like protein mRNA, complete cds.
+ACCESSION   JF915743
+VERSION     JF915743.1
+KEYWORDS    .
+SOURCE      Nilaparvata lugens (brown planthopper)
+  ORGANISM  Nilaparvata lugens
+            Eukaryota; Metazoa; Ecdysozoa; Arthropoda; Altocrustacea;
+            Allotriocarida; Hexapoda; Insecta; Pterygota; Neoptera; Eumetabola;
+            Paraneoptera; Hemiptera; Auchenorrhyncha; Delphacoidea;
+            Delphacidae; Delphacinae; Nilaparvata.
+REFERENCE   1  (bases 1 to 2119)
+  AUTHORS   Zha,W., Peng,X., Chen,R., Du,B., Zhu,L. and He,G.
+  TITLE     Knockdown of Midgut Genes by dsRNA-Transgenic Plant-Mediated RNA
+            Interference in the Hemipteran Insect Nilaparvata lugens
+  JOURNAL   PLoS ONE 6 (5), E20504 (2011)
+   PUBMED   21655219
+REFERENCE   2  (bases 1 to 2119)
+  AUTHORS   Zha,W., Peng,X., Chen,R., Du,B., Zhu,L. and He,G.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (04-MAY-2011) State Key Laboratory of Hybrid Rice,
+            College of Life Sciences, Wuhan University, Wuchang, Wuhan, Hubei
+            430072, China
+FEATURES             Location/Qualifiers
+     source          1..2119
+                     /organism="Nilaparvata lugens"
+                     /mol_type="mRNA"
+                     /db_xref="taxon:108931"
+     CDS             79..1953
+                     /note="systemic RNA interference deficient"
+                     /codon_start=1
+                     /product="SID-1-like protein"
+                     /protein_id="AEI25514.1"
+                     /translation="MIFSILFKMRNVLLYYVFLSFIITSVLSLNFESVLKNSENATVF
+                     HYCEFNKLYNFQANNATVLVLVFNKTENSTIYPARITTSSDAATEENPLLFAAWQKSQ
+                     LTTWEVPRLVPSNKNLLYRNVTRTLCPHYVNINSTAHMDSFFITVSIDASNTDFTIRA
+                     QLVDDFVVDVGRPISFTVSPAHSQFYSFTFPDYLSSGVLRIKSDNSVCMSLSVQNFSC
+                     PVYDQENNLKFTGYWETITKSGGMLLTKEAFPLRVFLVFVVHSNDGDCSGHIEGNSGS
+                     PADRIKRVELEIIPSITYQDYLIAMAAVLIAFALMYIGAFGVFVWAHKRKERNELSEE
+                     YDSFCGEASVVTQTLSGADEVGFFNSDQLSCNTSTLARPRERIIKLCLNDLAKVNHDV
+                     MRRRSNLYLWNLMTIAIFYSLPVVQLVLTYQKVLNSTGNQDLCYYNFLCSRKLGQFSD
+                     FNHIYSNIGYILLGILFLLIVYRRHATEKKKATGIPQHYGLYYTLGAALFMEGILSGC
+                     YHFCPNHSNFQFDTSFMYILAIISILKIYHSRHPDINASAYTAFGLLAVVITLGMCGV
+                     LYISTEFYVAFCIFHVCICLFLSAQIYYMGQWKLESLHTCHFIAEFQFHAAVMIAVAG
+                     "
+ORIGIN      
+        1 gaaaattgca gttgataatt tgagttttta tcacttaaaa atttttgtac atggaaataa
+       61 ttagagttat caaatatcat gatattttcc atcttgttca aaatgagaaa cgttttactt
+      121 tactacgtgt ttctgtcttt tatcattact tcagtactta gtttgaactt tgaatcagtt
+      181 ttaaagaatt ctgaaaacgc tacagttttt cactattgtg agttcaataa attgtataac
+      241 tttcaagcca acaacgcaac tgtgcttgtt ctggtattta ataaaacaga gaacagtacc
+      301 atatatcctg cacgaataac cacttcaagt gatgcggcta ctgaagaaaa tcctctactg
+      361 tttgctgctt ggcagaaatc acagttgaca acctgggaag tgcctcgtct agttccatcc
+      421 aacaagaatc tactgtacag gaatgtcact cgtacattgt gtccacacta cgtcaacatt
+      481 aactcaactg cacatatgga ttctttcttc ataacagtat caatagatgc aagcaatact
+      541 gacttcacta tacgagctca attggttgac gattttgttg tcgatgtggg aaggccgatt
+      601 tcattcactg tatcaccggc ccattcacag ttctattctt ttacgttccc tgactatctg
+      661 agctcagggg ttctgcgaat caaatctgac aactcagtct gcatgagctt gtccgttcaa
+      721 aacttcagct gtccggttta tgaccaagaa aacaacctga aattcacagg atactgggaa
+      781 acaatcacaa aaagtggagg gatgctttta accaaagaag cgtttcctct gagagttttc
+      841 ttagttttcg tggtgcattc gaacgacggg gattgttccg gacacattga agggaattct
+      901 ggaagcccgg ctgaccgcat caaacgtgtt gagcttgaaa ttatacccag tataacatac
+      961 caagactatc ttattgcaat ggcggccgtt ctcattgcat ttgcgttgat gtatattggt
+     1021 gctttcgggg tgttcgtctg ggctcataag aggaaagaaa gaaacgaact ctctgaggaa
+     1081 tatgacagtt tttgtggtga agcttccgtt gtaacacaga ctctctcagg cgccgatgaa
+     1141 gttgggtttt tcaactctga tcaactctct tgtaatactt caacgttggc aagacctaga
+     1201 gaaagaataa taaaattgtg tttgaatgac ttggctaaag tcaaccacga cgtgatgagg
+     1261 agaaggtcta atctgtactt atggaatctc atgacaatcg ctatattcta ttcgctgcct
+     1321 gtagtgcagc tggtcttgac ctaccaaaag gttctgaatt cgaccgggaa tcaagatctc
+     1381 tgctattaca attttctgtg ctctcggaaa ctgggccagt tcagtgactt caaccacatt
+     1441 tactccaaca tcggttacat tctgcttggc atcctgtttc ttctcattgt ttatagaaga
+     1501 catgcgactg agaaaaagaa ggcaacggga atacctcaac attatggtct gtattataca
+     1561 ttgggagccg cattattcat ggaaggcatt ctgagtgggt gctatcactt ctgtccaaat
+     1621 cattcaaatt tccaatttga tactagtttc atgtatattt tggcaataat ctccattcta
+     1681 aaaatctacc attctcgtca cccagatata aatgcaagtg cctacactgc attcggatta
+     1741 ttggctgtag taatcactct ggggatgtgc ggcgtactat acatctcgac cgaattctat
+     1801 gtcgcgtttt gtattttcca tgtttgtatt tgccttttct tatcggctca aatatactac
+     1861 atgggtcagt ggaaattaga atccctccac acatgccact tcatcgcaga attccaattc
+     1921 cacgccgcag tcatgattgc tgtcgcaggc tgaaaaaaga aaaatctata actagaaatt
+     1981 gtatattgtt caaagtgaaa tccttgtcaa agttatgaac atgtatcaaa ataaaattat
+     2041 aacttgtcaa tcagagtgaa atctttattt gcttttggag gattaaatca ttcagaattc
+     2101 actgatgaaa aaaaaaaaa
+//
+

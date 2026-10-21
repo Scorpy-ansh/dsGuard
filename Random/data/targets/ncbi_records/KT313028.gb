@@ -1,0 +1,70 @@
+LOCUS       KT313028                1426 bp    mRNA    linear   INV 23-NOV-2015
+DEFINITION  Nilaparvata lugens RanGTPase (Ran) mRNA, complete cds.
+ACCESSION   KT313028
+VERSION     KT313028.1
+KEYWORDS    .
+SOURCE      Nilaparvata lugens (brown planthopper)
+  ORGANISM  Nilaparvata lugens
+            Eukaryota; Metazoa; Ecdysozoa; Arthropoda; Altocrustacea;
+            Allotriocarida; Hexapoda; Insecta; Pterygota; Neoptera; Eumetabola;
+            Paraneoptera; Hemiptera; Auchenorrhyncha; Delphacoidea;
+            Delphacidae; Delphacinae; Nilaparvata.
+REFERENCE   1  (bases 1 to 1426)
+  AUTHORS   Li,K.L., Wan,P.J., Wang,W.X., Lai,F.X. and Fu,Q.
+  TITLE     Ran Involved in the Development and Reproduction Is a Potential
+            Target for RNA-Interference-Based Pest Management in Nilaparvata
+            lugens
+  JOURNAL   PLoS ONE 10 (11), E0142142 (2015)
+   PUBMED   26554926
+REFERENCE   2  (bases 1 to 1426)
+  AUTHORS   Li,K.L., Wan,P.J., Wang,W.X., Lai,F.X. and Fu,Q.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (19-JUL-2015) State Key Laboratory of Rice Biology, China
+            National Rice Research Institute, 28 Rice research institute road,
+            Hangzhou, Zhejiang 310006, China
+COMMENT     ##Assembly-Data-START##
+            Sequencing Technology :: Sanger dideoxy sequencing
+            ##Assembly-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..1426
+                     /organism="Nilaparvata lugens"
+                     /mol_type="mRNA"
+                     /db_xref="taxon:108931"
+     gene            1..1426
+                     /gene="Ran"
+     CDS             65..709
+                     /gene="Ran"
+                     /codon_start=1
+                     /product="RanGTPase"
+                     /protein_id="ALO64008.1"
+                     /translation="MEEQDMPTFKCVLVGDGGTGKTTFVKRHLTGEFEKKYVATLGVE
+                     VHPLVFHTNRGVIRFNVWDTAGQEKFGGLRDGYYIQGQCAIIMFDVTSRVTYKNVPNW
+                     HRDLVRVCENIPIVLCGNKVDIKDRKVKAKSIVFHRKKNLQYYDISAKSNYNFEKPFL
+                     WLAKKLIGDPNLEFVAMPALLPPEVTMDPQWQSQIEKDLKEAQATALPEDDEDL"
+ORIGIN      
+        1 ccattgtgga ccgtaacgtc ttctatttct agaagtaacc gtagtcaaaa acctcaaatt
+       61 cataatggaa gaacaggata tgccaacatt caagtgtgtg ctggttggag atggtggtac
+      121 cggcaaaact acatttgtca aacgacatct taccggagaa tttgaaaaga agtatgttgc
+      181 cacccttgga gttgaagttc acccccttgt atttcacaca aacagaggtg tgattaggtt
+      241 caatgtgtgg gacacagctg gccaggaaaa gttcggtgga cttcgtgatg gatattacat
+      301 tcagggacaa tgcgccatca ttatgtttga cgtaacgtca agagtcacct acaagaacgt
+      361 tcccaactgg cacagagatt tagtgagggt ttgcgaaaac attcccattg tactatgcgg
+      421 caacaaagta gacatcaagg acaggaaagt caaggccaag agcatagtct tccataggaa
+      481 gaagaacctt cagtactacg acatcagtgc gaaaagcaac tacaacttcg agaagccgtt
+      541 cctgtggttg gcaaagaagc tgatcggtga ccccaacctg gagttcgtcg ccatgcccgc
+      601 cctcctccct cccgaggtca caatggaccc ccaatggcag tcgcagatcg aaaaagatct
+      661 caaggaagct caggccaccg cccttcccga ggatgatgaa gatctgtaga atgtttaaca
+      721 tcattttgga cactaatgtg aaacttgagt tacgtgattt aaatgaaaat caaccgtgcg
+      781 aacttgtttt atttacgttt taagttgtgc ataatcctgt ttgaacaatt ttttttatct
+      841 agttattaca aaaatgcgtt tactcttgaa atagttcagt ctaatctaat aatgtgaagc
+      901 catattcgct gttaaataaa tgtttactgg aacttgatta caataattaa atctctgaca
+      961 agtaatttcg tttatttgta taatcttatt ttacaggata ttattcattc aagattatca
+     1021 tattactttt gttatggaat gtttctacag tttaaatagt acatttttac tgaaaataaa
+     1081 aatactgatg gctctacact acaaatatta tttttcaata tcaaagaaag ctttaagctc
+     1141 atctctaggg tgatgtaaat aacaaccctt ttacctataa ctgtttcttt gtgtcttttt
+     1201 gttgaactgg tagacatgga tgatattgaa ggatgcagat aaggtatgat ttgagtgttg
+     1261 ttaactgatc gtctgaatga gtcgattgtt tgaaaccatt gaacaatttt aattactagg
+     1321 agatgattat tagaagactg ttgatacaga ccgcaacatg ctggtttcga cgtggacaag
+     1381 aatgtatggc tgctaatgtt tatatgttcg agtgcaaaat acgcgt
+//
+

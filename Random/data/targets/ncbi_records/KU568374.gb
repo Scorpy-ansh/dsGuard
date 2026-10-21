@@ -1,0 +1,62 @@
+LOCUS       KU568374                1001 bp    mRNA    linear   INV 31-JUL-2016
+DEFINITION  Nilaparvata lugens SRP receptor beta subunit mRNA, complete cds.
+ACCESSION   KU568374
+VERSION     KU568374.1
+KEYWORDS    .
+SOURCE      Nilaparvata lugens (brown planthopper)
+  ORGANISM  Nilaparvata lugens
+            Eukaryota; Metazoa; Ecdysozoa; Arthropoda; Altocrustacea;
+            Allotriocarida; Hexapoda; Insecta; Pterygota; Neoptera; Eumetabola;
+            Paraneoptera; Hemiptera; Auchenorrhyncha; Delphacoidea;
+            Delphacidae; Delphacinae; Nilaparvata.
+REFERENCE   1  (bases 1 to 1001)
+  AUTHORS   Wang,W.
+  TITLE     Identification and function of 27 Ras-like family GTPases in brown
+            planthopper
+  JOURNAL   Unpublished
+REFERENCE   2  (bases 1 to 1001)
+  AUTHORS   Wang,W.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (20-JAN-2016) State Key Lab of Rice Biology, China
+            National Rice Research Institute, Tiyuchang Road 359, Hangzhou,
+            Zhejiang 310006, China
+COMMENT     ##Assembly-Data-START##
+            Assembly Method       :: SeqClean v. Lastest86_64; Newbler v.2.5.3;
+                                     v. Lucy v. 1.20p
+            Assembly Name         :: isotig00550
+            Sequencing Technology :: 454
+            ##Assembly-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..1001
+                     /organism="Nilaparvata lugens"
+                     /mol_type="mRNA"
+                     /db_xref="taxon:108931"
+     CDS             120..881
+                     /codon_start=1
+                     /product="SRP receptor beta subunit"
+                     /protein_id="ANW09661.1"
+                     /translation="MTSNTKFQFTPTEIFSRSNESQIYAIVIAIITILISIVFFAIWK
+                     RSRSVKNCILITGLCDSGKTLIYSHLLHSKYVGTHTSIKENIGDYVVKNRALRLIDIP
+                     GHERLRGRYIDAYKGLARGVIFVVDSVTLQKEIRDAAEFLYTLLLDPVLLKAKPQLLI
+                     LCNKQDQTMAKAANVVKSLLEKELNVLKVTKTNQLTSIEGSSSAAYLGSAGKDFNFTQ
+                     STIPVDFAECCAFRKDENTEPELKVSQNGLKALFE"
+ORIGIN      
+        1 gctgtctccc gtttggaaaa gtggcatgta ttcctagtgt tacttttgtg tctacttgac
+       61 gtttgattag ttgaagtttt tatgatacta gacctatact atacagtgat aaaattaata
+      121 tgacttctaa tacgaaattt caatttacac cgacggaaat attttctaga tcaaacgagt
+      181 cccaaattta tgctatagtt atagctatta taacaattct catctccatt gtattcttcg
+      241 caatatggaa aaggagtaga agtgtcaaaa actgtatcct cattactggt ctctgcgatt
+      301 caggaaaaac attgatctac tcacaccttc tccacagtaa atatgttgga acccatacgt
+      361 ccataaaaga gaatatcggg gattatgttg tgaaaaatag agccctccga ttgattgata
+      421 tcccaggcca tgaaaggctt cgcggcagat atattgacgc ctacaaagga ttagcacgtg
+      481 gagtgatctt tgttgtagat tcggtcacct tacagaagga aatcagggat gctgctgagt
+      541 tcttgtacac attgctgtta gatcctgtgc tgcttaaggc caaaccacaa cttttgatct
+      601 tgtgcaacaa acaagatcag acgatggcga aggcagctaa tgttgtcaaa tctcttctag
+      661 aaaaagaatt gaatgttcta aaagtgacaa aaacaaacca gctcacgagc atagaaggct
+      721 cttccagcgc cgcctatctt gggagcgcag gaaaagattt caatttcact caaagtacaa
+      781 ttccagtcga ttttgcagaa tgctgtgcct tccgaaaaga tgagaacact gaacctgaac
+      841 tgaaagtatc ccaaaatggc ttgaaagctt tgtttgagtg atggataatc ctactcaatt
+      901 tcatgacttc ttcacttgtc tagtttgaac aatctgatga taataaattt ttattattcg
+      961 attatatatt ataaaaattg ggtattgatt aagttattac t
+//
+

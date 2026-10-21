@@ -1,0 +1,96 @@
+LOCUS       FJ263048                2493 bp    mRNA    linear   INV 01-JUN-2009
+DEFINITION  Nilaparvata lugens ecdysteroid receptor A isoform (EcR-A) mRNA,
+            complete cds.
+ACCESSION   FJ263048
+VERSION     FJ263048.1
+KEYWORDS    .
+SOURCE      Nilaparvata lugens (brown planthopper)
+  ORGANISM  Nilaparvata lugens
+            Eukaryota; Metazoa; Ecdysozoa; Arthropoda; Altocrustacea;
+            Allotriocarida; Hexapoda; Insecta; Pterygota; Neoptera; Eumetabola;
+            Paraneoptera; Hemiptera; Auchenorrhyncha; Delphacoidea;
+            Delphacidae; Delphacinae; Nilaparvata.
+REFERENCE   1  (bases 1 to 2493)
+  AUTHORS   Pan,Z., Tang,B., Yao,Q., Chen,J., Chen,H., Chen,J., Tian,H.,
+            Zhang,D. and Zhang,W.
+  TITLE     mRNA sequence of Nilaparvata lugens ecdysteroid receptor A isoform
+            gene
+  JOURNAL   Unpublished
+REFERENCE   2  (bases 1 to 2493)
+  AUTHORS   Pan,Z., Tang,B., Yao,Q., Chen,J., Chen,H., Chen,J., Tian,H.,
+            Zhang,D. and Zhang,W.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (27-SEP-2008) State Key Lab of Biocontrol, Sun Yat-Sen
+            University, 135 Xin Gang Xi Road, GuangZhou, Guang Dong 510275,
+            China
+FEATURES             Location/Qualifiers
+     source          1..2493
+                     /organism="Nilaparvata lugens"
+                     /mol_type="mRNA"
+                     /db_xref="taxon:108931"
+     gene            1..2493
+                     /gene="EcR-A"
+                     /note="NlEcR-A"
+     CDS             78..2144
+                     /gene="EcR-A"
+                     /codon_start=1
+                     /product="ecdysteroid receptor A isoform"
+                     /protein_id="ACO55652.1"
+                     /translation="MELKLALYPAHNLPPLPNPLQNLQTKSTLLQILPSTPTLQQNLP
+                     TEPTQLRNLSPLPNPHQNLQRTSTLLQNLPSEPTPLQNLPTEPTQLRNLSPEPNLLLN
+                     PQTQPTQLQNLSPKHILHQNLHPEPTLSQNSQSESTHATTMLVKREQLDDTTPLRGGS
+                     PRGSPTPQGGLRGSSWPPSPRDMTPSYGGGGTPLNGYPSPTMSSQHSNYDSCLSPNSK
+                     IGREDLSPPSSLNGYGGGGGPGGGSMDPSELAKKKKGPVPRQQEELCLVCGDRASGYH
+                     YNALTCEGCKGFFRRSITKNAVYQCKYGNNCEINMYMRRKCQECRLKKCLSVGMRPEC
+                     VVPEYQCAVKRKEKRDMKDKTRPNSTTSRSPEALKIEPESQRMCDFSVELESGNTLGA
+                     SSNTGGLGAGPPSVGGSLSPPLTAGGVKPVSSEQEELIHRLVYFQNEFEHPSEEDLKR
+                     IGCLNLPSQVAQDQQAESDMRFRHITEITILTVQLIVEFAKRLPGFDKLLREDQIVLL
+                     KACSSEVMMLRTARKYDVNTDSILFANNQPYTRDSYTLAGMGYVVEDLLQFCRHMYRM
+                     KVDNAECALLTAIVIFSDRPSLLEAWKVEKIQEIYLEALKSYVDNRIRPKSSPIFAKL
+                     LSVLTELRTLGNQNSQMCFSLKLKNKKLPDFLMEIWDVDMEKEKENEKKKAAAENNNS
+                     MSSSTS"
+ORIGIN      
+        1 cacccatcag cctttcacca ccaataagta ccatcaacca agatgacagg gctaccaacc
+       61 ccactcacca tgaaggaatg gagctaaaat tggccctcta ccctgcccac aacctaccac
+      121 ctctacctaa cccactccag aacctccaaa ctaaatctac cttgctccag atattaccaa
+      181 gtacacccac tctgcaacag aaccttccaa cagaacctac ccagctccga aacctatcac
+      241 ctctacctaa cccgcaccag aacctacaaa ggacatctac tttgctccaa aacctaccaa
+      301 gtgaacctac tccactccaa aaccttccaa cagaacctac acagctccga aacctatcac
+      361 ctgaacctaa cctgcttctt aacccacaaa cccaacctac ccagctccaa aacctttcac
+      421 ctaaacatat tttgcaccag aacttacacc ctgaacctac tttgtcccaa aattcacaat
+      481 ctgaatctac tcacgcaacc acaatgctag taaagcgaga acagttggac gacaccaccc
+      541 cgttacgggg gggttcccca aggggcagcc cgacccccca ggggggcctg aggggctcct
+      601 cgtggccccc ctcgccaagg gacatgactc cctcctatgg cgggggtggc actcccctaa
+      661 atggctaccc ttctcccacc atgtcatcgc agcacagcaa ctatgacagc tgcctcagtc
+      721 ccaacagcaa aattggacgc gaagacctgt caccccctag ctcgctgaac gggtacggtg
+      781 gaggaggtgg ccccggtggg ggctccatgg acccctcgga gctggccaag aagaagaagg
+      841 ggcccgtccc caggcaacag gaggagctat gtctggtgtg tggcgacaga gcgtctgggt
+      901 accactacaa tgcgctcact tgtgaagggt gcaaaggttt tttccgaaga agcataacca
+      961 agaacgcggt ctaccagtgc aaatacggca acaactgcga gatcaacatg tatatgcgga
+     1021 gaaagtgcca agaatgccgg cttaaaaagt gtctcagcgt cggaatgagg cctgagtgtg
+     1081 ttgtaccaga gtatcagtgt gctgtgaaac gaaaggaaaa gcgagacatg aaggacaaga
+     1141 cacggcccaa ctctacgacg agtcgatcgc ccgaggcgct caaaattgaa cccgaatctc
+     1201 agaggatgtg cgacttcagc gtggaattgg agtcgggcaa cacactgggg gcatcgagta
+     1261 acacaggggg cctaggggct ggcccccctt cggttggtgg gtctctctcg ccccccctga
+     1321 cagccggggg tgtcaaaccg gtcagttcgg agcaggagga gctcattcat cggctggtct
+     1381 acttccagaa cgaattcgag cacccgagcg aggaggacct gaagaggatt ggatgtttga
+     1441 atctacccag tcaggtggcc caagaccagc aggcggagag cgacatgaga ttccgtcaca
+     1501 taacagaaat caccattttg acagtgcagc tgattgtcga attcgccaaa cgactgcccg
+     1561 gcttcgacaa actactcaga gaggaccaga ttgtactgct caaggcatgt tccagcgaag
+     1621 tgatgatgct tcgcacggcc agaaagtacg acgtgaacac agactctatc ctgttcgcca
+     1681 acaaccagcc ctacacgagg gactcctaca cgctggcggg catgggttat gtggtggagg
+     1741 acctgctgca gttctgtcga cacatgtacc gcatgaaggt ggacaatgct gagtgtgcgc
+     1801 tgctgacagc tattgtcata ttcagtgatc ggccctccct gctcgaagcc tggaaggtgg
+     1861 agaagatcca agagatctac ctagaagcac tgaagtccta cgttgacaac cgaattcggc
+     1921 cgaaatcgtc gccaatcttt gccaaattgc tgtcggtgct cacagagcta cgcaccctgg
+     1981 gcaaccagaa ctcgcagatg tgtttctcgc tcaagctgaa gaacaagaag ctgcccgact
+     2041 tcctcatgga gatctgggac gttgacatgg agaaagagaa ggagaatgag aagaagaagg
+     2101 ctgcagctga gaataacaac tctatgtcat catcgacttc ataaaaatgg tgcccgatgt
+     2161 gggtgtgtaa agacttgtta actttgtaaa aatgacaccc tgcatgggtg ttgaaagact
+     2221 tgataacttt gtaaaaatgg agcccgatgt gggactttaa aagttggggg tctttgttaa
+     2281 gaagacacca aacatatgta aaaatggtgc ccaatgtggg actttgaagg tttattgact
+     2341 ctgttaacaa ggcaccaaac ataggtcatc ctagactagt taactttgta aaaattgtga
+     2401 catttgtcgt tttaggaggt atcaatgtaa caggtgtttt aggaaactaa atgttgaaga
+     2461 aagccactaa aaaaaaaaaa aaaaaaaaaa aaa
+//
+

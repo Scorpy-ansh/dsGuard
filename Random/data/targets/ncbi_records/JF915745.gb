@@ -1,0 +1,62 @@
+LOCUS       JF915745                1282 bp    mRNA    linear   INV 21-JUN-2011
+DEFINITION  Nilaparvata lugens trypsin-like serine protein mRNA, complete cds.
+ACCESSION   JF915745
+VERSION     JF915745.1
+KEYWORDS    .
+SOURCE      Nilaparvata lugens (brown planthopper)
+  ORGANISM  Nilaparvata lugens
+            Eukaryota; Metazoa; Ecdysozoa; Arthropoda; Altocrustacea;
+            Allotriocarida; Hexapoda; Insecta; Pterygota; Neoptera; Eumetabola;
+            Paraneoptera; Hemiptera; Auchenorrhyncha; Delphacoidea;
+            Delphacidae; Delphacinae; Nilaparvata.
+REFERENCE   1  (bases 1 to 1282)
+  AUTHORS   Zha,W., Peng,X., Chen,R., Du,B., Zhu,L. and He,G.
+  TITLE     Knockdown of Midgut Genes by dsRNA-Transgenic Plant-Mediated RNA
+            Interference in the Hemipteran Insect Nilaparvata lugens
+  JOURNAL   PLoS ONE 6 (5), E20504 (2011)
+   PUBMED   21655219
+REFERENCE   2  (bases 1 to 1282)
+  AUTHORS   Zha,W., Peng,X., Chen,R., Du,B., Zhu,L. and He,G.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (04-MAY-2011) State Key Laboratory of Hybrid Rice,
+            College of Life Sciences, Wuhan University, Wuchang, Wuhan, Hubei
+            430072, China
+FEATURES             Location/Qualifiers
+     source          1..1282
+                     /organism="Nilaparvata lugens"
+                     /mol_type="mRNA"
+                     /db_xref="taxon:108931"
+     CDS             9..833
+                     /codon_start=1
+                     /product="trypsin-like serine protein"
+                     /protein_id="AEI25516.1"
+                     /translation="MFVIKVILVIICATVTFGETINGDEGYTAERIIGGKLSKISKYP
+                     YTVAVYVDGYLNGAGAILNNQWVIGSGFSVSTADSAANVTVRVASSGAYKGGLVKQVK
+                     RFVVHPKLRGWDHDMALLQLKTPLRRNTRNAKSIQLGSHLPKSGQKTIFTGYGSRQNE
+                     STPGIELVFDGLFKEIELPYMPYKECVKYHNATLFFTKNNFCTKTEYLSSPYARDFGG
+                     PLVYKKKLIGLFAGAPRCSGVIKPAVYADVTREHKWIKSTIKKYSHLQNLEIAEYE"
+ORIGIN      
+        1 gatacaaaat gttcgtaatt aaagtaatac tcgtgataat ctgtgccaca gtgactttcg
+       61 gtgagacaat aaatggtgat gaaggataca cggctgaaag aattatcggt ggaaagctga
+      121 gtaaaatttc aaaataccca tatacagtag cagtttatgt tgatggatat ttgaatggtg
+      181 ctggcgcaat attgaataac caatgggtga taggaagcgg attttcagtc agcacagccg
+      241 acagtgcagc caacgtaaca gtgcgagtag ccagtagcgg cgcctacaag ggaggtctgg
+      301 tcaaacaggt gaaacgcttt gtggttcatc cgaagctgcg agggtgggac catgacatgg
+      361 ctctgctgca gctcaagacc ccactcagac gcaacactcg caatgccaag agcattcagc
+      421 tgggcagcca tctgcctaaa tccggccaga aaaccatctt caccggctac ggcagtcgcc
+      481 aaaacgaatc tactccagga attgaactag ttttcgatgg attgttcaaa gagatagaac
+      541 taccttacat gccatacaag gaatgtgtca aatatcataa cgccactcta tttttcacca
+      601 aaaataactt ctgcacaaaa acggaatacc tcagctctcc atacgcgagg gactttggtg
+      661 ggccgcttgt ctacaagaag aaattgatcg gactgtttgc cggggctcca cgctgctctg
+      721 gcgtaatcaa gccggcagta tacgccgatg tcacacgcga gcataagtgg atcaagagca
+      781 ccatcaagaa atacagtcat cttcagaact tagaaatcgc tgagtatgaa tagaatattc
+      841 ctaacaaata aacgacatcg aaattcagtg attggggatt cattcataac cactaagaca
+      901 catcaaaaat aaagtcatct tcaaaactta cgacaatgaa atccagtgat cgaggattca
+      961 ttcataacca ccaagatcta tcaaaaaata cagttatctt ctgaacttag aaatcactgt
+     1021 gtatgaatag aagaatatta ctaaccaata aatgacattc aacttcagtg attgaggatt
+     1081 cattcataac cagaaagacc catcaaaaat aaagtcatct tcaaaactta cgacattgaa
+     1141 atccagtgat cgaggattca ttcataacca ccaagatcta tcaaaaaata cagttatctt
+     1201 ctgaacttag aaatcactgt gtatgaatag aagaatatta ctaaccaata aatgacattc
+     1261 aacttgaaaa aaaaaaaaaa aa
+//
+

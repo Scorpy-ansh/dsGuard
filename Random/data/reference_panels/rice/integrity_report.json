@@ -1,0 +1,20 @@
+{
+  "organism": "Oryza sativa Japonica Group",
+  "assembly_accession": "GCF_034140825.1",
+  "source": "Official NCBI Datasets RNA FASTA",
+  "source_file": "C:\\Users\\gfxsc\\Desktop\\inspect\\rice_official_rna\\ncbi_dataset\\data\\GCF_034140825.1\\rna.fna",
+  "record_count": 55675,
+  "unique_record_ids": 55675,
+  "duplicate_id_count": 0,
+  "duplicate_ids_sample": [],
+  "empty_sequences": 0,
+  "total_bases": 107882961,
+  "minimum_sequence_length": 52,
+  "maximum_sequence_length": 23949,
+  "invalid_character_counts": {},
+  "records_with_trailing_A_run_ge_10": 1255,
+  "records_with_trailing_A_run_ge_20": 400,
+  "maximum_trailing_A_run": 61,
+  "sha256": "47e1568777b0e259393588a0e36335fff9f61034cf9cbd70d8ce3712be63bba9",
+  "interpretation": "Integrity check only. This does not establish biological completeness, transcript annotation correctness, or non-target safety. Trailing A runs were measured, not removed."
+}
