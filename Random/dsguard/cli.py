@@ -105,9 +105,16 @@ def analyse_gene(name, q, orgs, gene_matches, a, thr, outdir, ref_names):
     primers.update(window_start_1based=best + 1, window_end_1based=best + L)
     with open(os.path.join(gdir, "primers.json"), "w") as fh:
         json.dump(primers, fh, indent=2)
+    threshold_met = bool(hazard[best] <= a.max_hazard)
+    recommendation_status = (
+        "within_threshold" if threshold_met else "fallback_threshold_exceeded"
+    )
     rec = {"start": best + 1, "end": best + L, "potency": round(float(pot[best]), 4),
-           "max_match": int(max_match[best]), "hazard": round(float(hazard[best]), 6)}
+           "max_match": int(max_match[best]), "hazard": round(float(hazard[best]), 6),
+           "recommendation_status": recommendation_status,
+           "max_hazard": float(a.max_hazard)}
     row.update(status="ok" if clean.size else f"no_window_free_of_{thr}nt_match",
+               recommendation_status=recommendation_status,
                rec_start=rec["start"], rec_end=rec["end"], rec_potency=rec["potency"],
                rec_max_match=rec["max_match"], rec_hazard=rec["hazard"])
     _report(gdir, name, row, rec, hits, primers, a, thr)
@@ -121,10 +128,19 @@ def _report(gdir, name, row, rec, hits, primers, a, thr):
          f"- Candidate windows ({a.window} bp): {row.get('windows', 0)}; "
          f"free of any >= {thr} nt match to the panel: {row.get('clean_windows', 0)}", ""]
     if rec:
+        threshold_met = rec["recommendation_status"] == "within_threshold"
+        recommendation_label = (
+            "WITHIN CONFIGURED THRESHOLD"
+            if threshold_met
+            else "FALLBACK — CONFIGURED THRESHOLD EXCEEDED"
+        )
         L += ["## Recommended window",
+              f"- Recommendation status: **{recommendation_label}**",
               f"- Position {rec['start']}-{rec['end']} (1-based), potency {rec['potency']}",
               f"- Longest panel match inside it: {rec['max_match']} nt (exact if >= {thr}; otherwise a lower bound)",
               f"- Graded hazard: {rec['hazard']}",
+              f"- Configured maximum hazard: {rec['max_hazard']}",
+              "- Hazard is a heuristic score, not a validated biological probability.",
               f"- T7 forward: `{primers['forward']}`", f"- T7 reverse: `{primers['reverse']}`", ""]
     L += [f"## Non-target matches >= {thr} nt across the whole gene"]
     if hits:
@@ -193,8 +209,9 @@ def main(argv=None):
     rows = [analyse_gene(names[i], arrays[i], orgs, per_gene[i], a, thr, a.out, None) for i in range(len(arrays))]
     order = {"ok": 0}
     rows.sort(key=lambda r: (order.get(r["status"], 1), r.get("rec_hazard", 9), -r.get("rec_potency", 0)))
-    cols = ["gene", "status", "length_bp", "gc_pct", "windows", "clean_windows", "rec_start", "rec_end",
-            "rec_potency", "rec_max_match", "rec_hazard", "total_hits"] + [f"hits_{o}" for o in orgs]
+    cols = ["gene", "status", "recommendation_status", "length_bp", "gc_pct",
+            "windows", "clean_windows", "rec_start", "rec_end", "rec_potency",
+            "rec_max_match", "rec_hazard", "total_hits"] + [f"hits_{o}" for o in orgs]
     _write_csv(os.path.join(a.out, "summary.csv"), cols, [[r.get(c, "") for c in cols] for r in rows])
     manifest["genes"] = names
     with open(os.path.join(a.out, "manifest.json"), "w") as fh:
