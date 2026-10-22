@@ -510,6 +510,73 @@ def get_job(job_id: str):
     return document
 
 
+
+@app.delete("/api/jobs/{job_id}")
+def delete_job(job_id: str):
+    """Delete one completed or failed screening and its stored files."""
+
+    with job_lock:
+        document = jobs.find_one({"_id": job_id})
+
+        if not document:
+            raise HTTPException(
+                status_code=404,
+                detail="Job not found.",
+            )
+
+        if document.get("status") in {"queued", "running"}:
+            raise HTTPException(
+                status_code=409,
+                detail="Cannot delete a screening while it is queued or running.",
+            )
+
+        upload_dir = (UPLOAD_ROOT / job_id).resolve()
+        output_dir = (OUTPUT_ROOT / job_id).resolve()
+
+        # Ensure both paths are direct children of their configured roots.
+        if (
+            upload_dir.parent != UPLOAD_ROOT.resolve()
+            or output_dir.parent != OUTPUT_ROOT.resolve()
+        ):
+            raise HTTPException(
+                status_code=400,
+                detail="Invalid job path.",
+            )
+
+        # Remove files first. Retain the database record if cleanup fails.
+        try:
+            for directory in (upload_dir, output_dir):
+                if directory.exists():
+                    shutil.rmtree(directory)
+        except OSError as exc:
+            raise HTTPException(
+                status_code=500,
+                detail="Could not remove screening files. The screening record was retained.",
+            ) from exc
+
+        try:
+            result = jobs.delete_one({"_id": job_id})
+
+            if result.deleted_count != 1:
+                raise HTTPException(
+                    status_code=404,
+                    detail="Job not found.",
+                )
+
+        except PyMongoError as exc:
+            raise HTTPException(
+                status_code=500,
+                detail="Files were removed, but the screening record could not be deleted.",
+            ) from exc
+
+    return {
+        "job_id": job_id,
+        "status": "deleted",
+        "message": "Screening history entry and associated files deleted.",
+    }
+
+
+
 @app.get("/api/jobs/{job_id}/results")
 def get_job_results(job_id: str):
     document = jobs.find_one(

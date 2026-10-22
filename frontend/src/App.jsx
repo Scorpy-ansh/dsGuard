@@ -223,6 +223,46 @@ function App() {
     }
   }
 
+  async function deleteJob(job) {
+    const confirmed = window.confirm(
+      `Delete screening "${job.target_filename || job.job_id}"?\n\nThis will permanently remove its history record, uploaded files, and generated results.`
+    );
+
+    if (!confirmed) return;
+
+    setError("");
+    setNotice("");
+
+    try {
+      const response = await fetch(
+        `${API}/api/jobs/${encodeURIComponent(job.job_id)}`,
+        { method: "DELETE" }
+      );
+
+      const data = await response.json().catch(() => ({}));
+
+      if (!response.ok) {
+        throw new Error(data.detail || "Could not delete this screening.");
+      }
+
+      // Clear the results view if this was the selected job.
+      if (selectedJob === job.job_id) {
+        setSelectedJob(null);
+        setResults(null);
+        setHits([]);
+        setGeneReports([]);
+        setSelectedReportGene("");
+        setGeneReport("");
+      }
+
+      await loadDashboard();
+      setNotice("Screening history entry deleted successfully.");
+    } catch (err) {
+      setError(err.message || "Could not delete this screening.");
+    }
+  }
+
+
   async function openJob(jobId) {
     setSelectedJob(jobId);
     setResults(null);
@@ -844,12 +884,29 @@ function App() {
                             : "—"}
                         </td>
                         <td>
-                          <button
-                            className="text-button"
-                            onClick={() => openJob(job.job_id)}
-                          >
-                            Open
-                          </button>
+
+<div className="history-actions">
+  <button
+    className="text-button"
+    onClick={() => openJob(job.job_id)}
+  >
+    Open
+  </button>
+
+  <button
+    className="delete-button"
+    onClick={() => deleteJob(job)}
+    disabled={job.status === "queued" || job.status === "running"}
+    title={
+      job.status === "queued" || job.status === "running"
+        ? "Wait until this screening finishes before deleting it."
+        : "Delete this screening"
+    }
+  >
+    Delete
+  </button>
+</div>
+
                         </td>
                       </tr>
                     ))}

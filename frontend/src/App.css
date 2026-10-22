@@ -212,3 +212,31 @@ pre code {
   background: transparent !important;
   color: #e2e8f0 !important;
 }
+
+.history-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  white-space: nowrap;
+}
+
+.delete-button {
+  background: transparent;
+  border: 1px solid #7f303d;
+  color: #ff8b9b;
+  border-radius: 7px;
+  padding: 7px 11px;
+  cursor: pointer;
+  font: inherit;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.delete-button:hover:not(:disabled) {
+  background: rgba(239, 68, 68, 0.12);
+  border-color: #ef4444;
+}
+
+.delete-button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
