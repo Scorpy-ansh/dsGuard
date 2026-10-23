@@ -97,20 +97,45 @@ def coverage_profile(intervals, n):
         np.maximum(cov[a:b], b - a, out=cov[a:b])
     return cov
 
-
 def window_longest(intervals, n, L):
     """For every window [w, w+L): the longest match lying inside it (clipped to
     the window). A window holds a >=21-nt hazard iff this is >= 21."""
+    if not isinstance(n, (int, np.integer)) or isinstance(n, bool) or n < 0:
+        raise ValueError("n must be a nonnegative integer")
+
     if not isinstance(L, (int, np.integer)) or isinstance(L, bool) or L <= 0:
         raise ValueError("L must be a positive integer")
+
     nw = n - L + 1
+    if nw <= 0:
+        return np.zeros(0, np.int32)
+
     ws = np.arange(nw)
     best = np.zeros(nw, np.int32)
-    for a, b in intervals:
-        lo, hi = max(0, a - L + 1), min(nw, b)  # windows that overlap [a, b)
+
+    for interval in intervals:
+        try:
+            a, b = interval
+        except (TypeError, ValueError) as exc:
+            raise ValueError("Each interval must contain exactly two coordinates") from exc
+
+        if (
+            not isinstance(a, (int, np.integer))
+            or isinstance(a, bool)
+            or not isinstance(b, (int, np.integer))
+            or isinstance(b, bool)
+            or a < 0
+            or a > b
+            or b > n
+        ):
+            raise ValueError("Each interval must satisfy 0 <= start <= end <= n")
+
+        lo, hi = max(0, a - L + 1), min(nw, b)
         if hi <= lo:
             continue
+
         w = ws[lo:hi]
         ov = np.minimum(b, w + L) - np.maximum(a, w)
         np.maximum(best[lo:hi], ov, out=best[lo:hi])
+
     return best

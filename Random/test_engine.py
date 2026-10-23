@@ -161,3 +161,22 @@ def test_window_longest_rejects_invalid_window_length():
 def test_window_longest_rejects_nonpositive_window_length(window_length):
     with pytest.raises(ValueError, match="positive"):
         window_longest([(2, 5)], n=10, L=window_length)
+
+@pytest.mark.parametrize("sequence_length", [-1, -10, 1.5, True])
+def test_window_longest_rejects_invalid_sequence_length(sequence_length):
+    with pytest.raises(ValueError, match="n must be a nonnegative integer"):
+        window_longest([], n=sequence_length, L=5)
+
+
+@pytest.mark.parametrize(
+    "interval",
+    [
+        (-1, 5),   # starts before the sequence
+        (2, 11),   # ends after the sequence
+        (5, 2),    # end before start
+        (0, -1),   # negative end
+    ],
+)
+def test_window_longest_rejects_invalid_intervals(interval):
+    with pytest.raises(ValueError, match="interval"):
+        window_longest([interval], n=10, L=5)
