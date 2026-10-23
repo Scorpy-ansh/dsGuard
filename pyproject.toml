@@ -17,6 +17,7 @@ dev = ["pytest"]
 dsguard = "dsguard.cli:main"
 
 [tool.setuptools]
+package-dir = {"" = "Random"}
 packages = ["dsguard"]
 
 [tool.pytest.ini_options]
