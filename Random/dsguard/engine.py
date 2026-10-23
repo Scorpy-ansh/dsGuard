@@ -101,6 +101,8 @@ def coverage_profile(intervals, n):
 def window_longest(intervals, n, L):
     """For every window [w, w+L): the longest match lying inside it (clipped to
     the window). A window holds a >=21-nt hazard iff this is >= 21."""
+    if not isinstance(L, (int, np.integer)) or isinstance(L, bool) or L <= 0:
+        raise ValueError("L must be a positive integer")
     nw = n - L + 1
     ws = np.arange(nw)
     best = np.zeros(nw, np.int32)

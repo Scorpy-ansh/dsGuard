@@ -97,3 +97,67 @@ def test_k11_randomized_against_bruteforce():
         }
 
         assert got == expected
+
+@pytest.mark.parametrize("k", [3, 5, 11])
+def test_long_matches_are_invariant_across_chunk_sizes(k):
+    """Qualifying matches must not depend on reference chunk size."""
+    rng = np.random.default_rng(20261023 + k)
+    query = rand(rng, 120)
+    reference = rand(rng, 900)
+
+    min_len = 2 * k - 1
+    q_start = 37
+    match_len = max(min_len, 30)
+    reference_start = 5 * k + 2
+
+    reference[
+        reference_start:reference_start + match_len
+    ] = query[q_start:q_start + match_len]
+
+    expected = brute_matches(query, reference, min_len)
+
+    for chunk in (k, 2 * k, 7 * k, 31 * k):
+        got = {
+            match
+            for match in find_matches(
+                query, reference, k=k, chunk=chunk
+            )
+            if match[1] - match[0] >= min_len
+        }
+
+        assert got == expected, (
+            f"Results differed for k={k}, chunk={chunk}"
+        )
+
+
+@pytest.mark.parametrize(
+    "interval, expected",
+    [
+        ((10, 20), [10, 9, 8, 7, 6]),
+        ((15, 25), [5, 6, 7, 8, 9]),
+        ((20, 30), [0, 1, 2, 3, 4]),
+    ],
+)
+def test_window_longest_boundary_cases(interval, expected):
+    """Check match clipping at window boundaries."""
+    best = window_longest([interval], n=30, L=10)
+    assert best[10:15].tolist() == expected
+
+
+def test_window_longest_match_at_sequence_end():
+    """A match ending at the sequence boundary is handled correctly."""
+    best = window_longest([(20, 30)], n=30, L=10)
+
+    assert best[20] == 10
+    assert best[-1] == 10
+
+
+def test_window_longest_rejects_invalid_window_length():
+    """A window longer than the sequence produces no windows."""
+    best = window_longest([(2, 5)], n=10, L=11)
+
+    assert best.size == 0
+@pytest.mark.parametrize("window_length", [0, -1, -10])
+def test_window_longest_rejects_nonpositive_window_length(window_length):
+    with pytest.raises(ValueError, match="positive"):
+        window_longest([(2, 5)], n=10, L=window_length)
