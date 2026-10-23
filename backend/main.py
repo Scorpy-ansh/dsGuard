@@ -687,7 +687,7 @@ def get_gene_report(job_id: str, gene_name: str):
 
     return {
         "gene": gene_name,
-        "report": report_path.read_text(encoding="utf-8"),
+        "report": report_path.read_bytes().decode("cp1252"),
     }
 
 
