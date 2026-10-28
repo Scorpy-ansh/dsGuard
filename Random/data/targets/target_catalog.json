@@ -1,0 +1,4161 @@
+{
+
+  "schema_version": 1,
+
+  "description": "Verified target-organism catalog derived from supplied workbooks and the existing curated Nilaparvata target FASTA. Catalog entries do not contain nucleotide sequences; sequence must be supplied or resolved from NCBI.",
+
+  "organisms": [
+
+    {
+
+      "key": "chilo_suppressalis",
+
+      "scientific_name": "Chilo suppressalis",
+
+      "taxonomy_id": "168631",
+
+      "genes": [
+
+        {
+
+          "gene_name": "ND2",
+
+          "gene_identifier": 10743975,
+
+          "accession": "NC_015612.1",
+
+          "accession_status": "verified",
+
+          "accession_status_source": "Verified",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "MT",
+
+          "start_bp": 255,
+
+          "end_bp": 1268,
+
+          "orientation": "plus",
+
+          "length_bp": 1014,
+
+          "fasta_reference": "FASTA: NC_015612.1:255..1268",
+
+          "ncbi_search_reference": "NCBI Gene: 10743975",
+
+          "source_workbook": "Chilo_suppressalis_13_genes.xlsx",
+
+          "source_sheet": "C_suppressalis_13_genes",
+
+          "source_row": 4,
+
+          "source_information": "NCBI Gene export you provided (gene_result (2).txt): GeneID 10743975, status live, RefSeq mitogenome NC_015612.1, positions 255..1268",
+
+          "notes": "Mitochondrial gene on the plus strand.",
+
+          "literature_source": "NCBI Gene export (gene_result (2).txt), GeneID 10743975",
+
+          "function": "NADH dehydrogenase subunit 2; mitochondrial-encoded subunit of respiratory chain complex I (oxidative phosphorylation). RNAi effect not checked in C. suppressalis",
+
+          "gene_family": "Mitochondrial OXPHOS – Complex I (NADH dehydrogenase)",
+
+          "organism": "Chilo suppressalis",
+
+          "taxonomy_id": "168631"
+
+        },
+
+        {
+
+          "gene_name": "ND1",
+
+          "gene_identifier": 10743974,
+
+          "accession": "NC_015612.1",
+
+          "accession_status": "verified",
+
+          "accession_status_source": "Verified",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "MT",
+
+          "start_bp": 11824,
+
+          "end_bp": 12765,
+
+          "orientation": "minus",
+
+          "length_bp": 942,
+
+          "fasta_reference": "FASTA: NC_015612.1:11824..12765",
+
+          "ncbi_search_reference": "NCBI Gene: 10743974",
+
+          "source_workbook": "Chilo_suppressalis_13_genes.xlsx",
+
+          "source_sheet": "C_suppressalis_13_genes",
+
+          "source_row": 5,
+
+          "source_information": "NCBI Gene export you provided (gene_result (2).txt): GeneID 10743974, status live, RefSeq mitogenome NC_015612.1, positions 11824..12765",
+
+          "notes": "Mitochondrial gene on the minus strand. The FASTA link (column H) uses strand=2, so it returns the reverse complement, i.e. the gene in coding orientation.",
+
+          "literature_source": "NCBI Gene export (gene_result (2).txt), GeneID 10743974",
+
+          "function": "NADH dehydrogenase subunit 1; mitochondrial-encoded subunit of respiratory chain complex I (oxidative phosphorylation). RNAi effect not checked in C. suppressalis",
+
+          "gene_family": "Mitochondrial OXPHOS – Complex I (NADH dehydrogenase)",
+
+          "organism": "Chilo suppressalis",
+
+          "taxonomy_id": "168631"
+
+        },
+
+        {
+
+          "gene_name": "CYTB",
+
+          "gene_identifier": 10743973,
+
+          "accession": "NC_015612.1",
+
+          "accession_status": "verified",
+
+          "accession_status_source": "Verified",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "MT",
+
+          "start_bp": 10597,
+
+          "end_bp": 11742,
+
+          "orientation": "plus",
+
+          "length_bp": 1146,
+
+          "fasta_reference": "FASTA: NC_015612.1:10597..11742",
+
+          "ncbi_search_reference": "NCBI Gene: 10743973",
+
+          "source_workbook": "Chilo_suppressalis_13_genes.xlsx",
+
+          "source_sheet": "C_suppressalis_13_genes",
+
+          "source_row": 6,
+
+          "source_information": "NCBI Gene export you provided (gene_result (2).txt): GeneID 10743973, status live, RefSeq mitogenome NC_015612.1, positions 10597..11742",
+
+          "notes": "Mitochondrial gene on the plus strand. Overlaps ND6 by 1 bp (positions 10597–10597) according to the file coordinates.",
+
+          "literature_source": "NCBI Gene export (gene_result (2).txt), GeneID 10743973",
+
+          "function": "Cytochrome b; mitochondrial-encoded subunit of respiratory chain complex III (oxidative phosphorylation). RNAi effect not checked in C. suppressalis",
+
+          "gene_family": "Mitochondrial OXPHOS – Complex III (cytochrome bc1)",
+
+          "organism": "Chilo suppressalis",
+
+          "taxonomy_id": "168631"
+
+        },
+
+        {
+
+          "gene_name": "ND6",
+
+          "gene_identifier": 10743972,
+
+          "accession": "NC_015612.1",
+
+          "accession_status": "verified",
+
+          "accession_status_source": "Verified",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "MT",
+
+          "start_bp": 10058,
+
+          "end_bp": 10597,
+
+          "orientation": "plus",
+
+          "length_bp": 540,
+
+          "fasta_reference": "FASTA: NC_015612.1:10058..10597",
+
+          "ncbi_search_reference": "NCBI Gene: 10743972",
+
+          "source_workbook": "Chilo_suppressalis_13_genes.xlsx",
+
+          "source_sheet": "C_suppressalis_13_genes",
+
+          "source_row": 7,
+
+          "source_information": "NCBI Gene export you provided (gene_result (2).txt): GeneID 10743972, status live, RefSeq mitogenome NC_015612.1, positions 10058..10597",
+
+          "notes": "Mitochondrial gene on the plus strand. Overlaps CYTB by 1 bp (positions 10597–10597) according to the file coordinates.",
+
+          "literature_source": "NCBI Gene export (gene_result (2).txt), GeneID 10743972",
+
+          "function": "NADH dehydrogenase subunit 6; mitochondrial-encoded subunit of respiratory chain complex I (oxidative phosphorylation). RNAi effect not checked in C. suppressalis",
+
+          "gene_family": "Mitochondrial OXPHOS – Complex I (NADH dehydrogenase)",
+
+          "organism": "Chilo suppressalis",
+
+          "taxonomy_id": "168631"
+
+        },
+
+        {
+
+          "gene_name": "ND4L",
+
+          "gene_identifier": 10743971,
+
+          "accession": "NC_015612.1",
+
+          "accession_status": "verified",
+
+          "accession_status_source": "Verified",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "MT",
+
+          "start_bp": 9629,
+
+          "end_bp": 9922,
+
+          "orientation": "minus",
+
+          "length_bp": 294,
+
+          "fasta_reference": "FASTA: NC_015612.1:9629..9922",
+
+          "ncbi_search_reference": "NCBI Gene: 10743971",
+
+          "source_workbook": "Chilo_suppressalis_13_genes.xlsx",
+
+          "source_sheet": "C_suppressalis_13_genes",
+
+          "source_row": 8,
+
+          "source_information": "NCBI Gene export you provided (gene_result (2).txt): GeneID 10743971, status live, RefSeq mitogenome NC_015612.1, positions 9629..9922",
+
+          "notes": "Mitochondrial gene on the minus strand. The FASTA link (column H) uses strand=2, so it returns the reverse complement, i.e. the gene in coding orientation.",
+
+          "literature_source": "NCBI Gene export (gene_result (2).txt), GeneID 10743971",
+
+          "function": "NADH dehydrogenase subunit 4L; mitochondrial-encoded subunit of respiratory chain complex I (oxidative phosphorylation). RNAi effect not checked in C. suppressalis",
+
+          "gene_family": "Mitochondrial OXPHOS – Complex I (NADH dehydrogenase)",
+
+          "organism": "Chilo suppressalis",
+
+          "taxonomy_id": "168631"
+
+        },
+
+        {
+
+          "gene_name": "ND4",
+
+          "gene_identifier": 10743970,
+
+          "accession": "NC_015612.1",
+
+          "accession_status": "verified",
+
+          "accession_status_source": "Verified",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "MT",
+
+          "start_bp": 8282,
+
+          "end_bp": 9621,
+
+          "orientation": "minus",
+
+          "length_bp": 1340,
+
+          "fasta_reference": "FASTA: NC_015612.1:8282..9621",
+
+          "ncbi_search_reference": "NCBI Gene: 10743970",
+
+          "source_workbook": "Chilo_suppressalis_13_genes.xlsx",
+
+          "source_sheet": "C_suppressalis_13_genes",
+
+          "source_row": 9,
+
+          "source_information": "NCBI Gene export you provided (gene_result (2).txt): GeneID 10743970, status live, RefSeq mitogenome NC_015612.1, positions 8282..9621",
+
+          "notes": "Mitochondrial gene on the minus strand. The FASTA link (column H) uses strand=2, so it returns the reverse complement, i.e. the gene in coding orientation.",
+
+          "literature_source": "NCBI Gene export (gene_result (2).txt), GeneID 10743970",
+
+          "function": "NADH dehydrogenase subunit 4; mitochondrial-encoded subunit of respiratory chain complex I (oxidative phosphorylation). RNAi effect not checked in C. suppressalis",
+
+          "gene_family": "Mitochondrial OXPHOS – Complex I (NADH dehydrogenase)",
+
+          "organism": "Chilo suppressalis",
+
+          "taxonomy_id": "168631"
+
+        },
+
+        {
+
+          "gene_name": "ND5",
+
+          "gene_identifier": 10743969,
+
+          "accession": "NC_015612.1",
+
+          "accession_status": "verified",
+
+          "accession_status_source": "Verified",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "MT",
+
+          "start_bp": 6465,
+
+          "end_bp": 8216,
+
+          "orientation": "minus",
+
+          "length_bp": 1752,
+
+          "fasta_reference": "FASTA: NC_015612.1:6465..8216",
+
+          "ncbi_search_reference": "NCBI Gene: 10743969",
+
+          "source_workbook": "Chilo_suppressalis_13_genes.xlsx",
+
+          "source_sheet": "C_suppressalis_13_genes",
+
+          "source_row": 10,
+
+          "source_information": "NCBI Gene export you provided (gene_result (2).txt): GeneID 10743969, status live, RefSeq mitogenome NC_015612.1, positions 6465..8216",
+
+          "notes": "Mitochondrial gene on the minus strand. The FASTA link (column H) uses strand=2, so it returns the reverse complement, i.e. the gene in coding orientation.",
+
+          "literature_source": "NCBI Gene export (gene_result (2).txt), GeneID 10743969",
+
+          "function": "NADH dehydrogenase subunit 5; mitochondrial-encoded subunit of respiratory chain complex I (oxidative phosphorylation). RNAi effect not checked in C. suppressalis",
+
+          "gene_family": "Mitochondrial OXPHOS – Complex I (NADH dehydrogenase)",
+
+          "organism": "Chilo suppressalis",
+
+          "taxonomy_id": "168631"
+
+        },
+
+        {
+
+          "gene_name": "ND3",
+
+          "gene_identifier": 10743968,
+
+          "accession": "NC_015612.1",
+
+          "accession_status": "verified",
+
+          "accession_status_source": "Verified",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "MT",
+
+          "start_bp": 5622,
+
+          "end_bp": 5975,
+
+          "orientation": "plus",
+
+          "length_bp": 354,
+
+          "fasta_reference": "FASTA: NC_015612.1:5622..5975",
+
+          "ncbi_search_reference": "NCBI Gene: 10743968",
+
+          "source_workbook": "Chilo_suppressalis_13_genes.xlsx",
+
+          "source_sheet": "C_suppressalis_13_genes",
+
+          "source_row": 11,
+
+          "source_information": "NCBI Gene export you provided (gene_result (2).txt): GeneID 10743968, status live, RefSeq mitogenome NC_015612.1, positions 5622..5975",
+
+          "notes": "Mitochondrial gene on the plus strand.",
+
+          "literature_source": "NCBI Gene export (gene_result (2).txt), GeneID 10743968",
+
+          "function": "NADH dehydrogenase subunit 3; mitochondrial-encoded subunit of respiratory chain complex I (oxidative phosphorylation). RNAi effect not checked in C. suppressalis",
+
+          "gene_family": "Mitochondrial OXPHOS – Complex I (NADH dehydrogenase)",
+
+          "organism": "Chilo suppressalis",
+
+          "taxonomy_id": "168631"
+
+        },
+
+        {
+
+          "gene_name": "COX3",
+
+          "gene_identifier": 10743967,
+
+          "accession": "NC_015612.1",
+
+          "accession_status": "verified",
+
+          "accession_status_source": "Verified",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "MT",
+
+          "start_bp": 4764,
+
+          "end_bp": 5552,
+
+          "orientation": "plus",
+
+          "length_bp": 789,
+
+          "fasta_reference": "FASTA: NC_015612.1:4764..5552",
+
+          "ncbi_search_reference": "NCBI Gene: 10743967",
+
+          "source_workbook": "Chilo_suppressalis_13_genes.xlsx",
+
+          "source_sheet": "C_suppressalis_13_genes",
+
+          "source_row": 12,
+
+          "source_information": "NCBI Gene export you provided (gene_result (2).txt): GeneID 10743967, status live, RefSeq mitogenome NC_015612.1, positions 4764..5552",
+
+          "notes": "Mitochondrial gene on the plus strand. Overlaps ATP6 by 1 bp (positions 4764–4764) according to the file coordinates.",
+
+          "literature_source": "NCBI Gene export (gene_result (2).txt), GeneID 10743967",
+
+          "function": "Cytochrome c oxidase subunit III; mitochondrial-encoded subunit of respiratory chain complex IV (oxidative phosphorylation). RNAi effect not checked in C. suppressalis",
+
+          "gene_family": "Mitochondrial OXPHOS – Complex IV (cytochrome c oxidase)",
+
+          "organism": "Chilo suppressalis",
+
+          "taxonomy_id": "168631"
+
+        },
+
+        {
+
+          "gene_name": "ATP6",
+
+          "gene_identifier": 10743966,
+
+          "accession": "NC_015612.1",
+
+          "accession_status": "verified",
+
+          "accession_status_source": "Verified",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "MT",
+
+          "start_bp": 4084,
+
+          "end_bp": 4764,
+
+          "orientation": "plus",
+
+          "length_bp": 681,
+
+          "fasta_reference": "FASTA: NC_015612.1:4084..4764",
+
+          "ncbi_search_reference": "NCBI Gene: 10743966",
+
+          "source_workbook": "Chilo_suppressalis_13_genes.xlsx",
+
+          "source_sheet": "C_suppressalis_13_genes",
+
+          "source_row": 13,
+
+          "source_information": "NCBI Gene export you provided (gene_result (2).txt): GeneID 10743966, status live, RefSeq mitogenome NC_015612.1, positions 4084..4764",
+
+          "notes": "Mitochondrial gene on the plus strand. Overlaps COX3 by 1 bp (positions 4764–4764) according to the file coordinates. Overlaps ATP8 by 7 bp (positions 4084–4090) according to the file coordinates.",
+
+          "literature_source": "NCBI Gene export (gene_result (2).txt), GeneID 10743966",
+
+          "function": "ATP synthase F0 subunit 6; mitochondrial-encoded subunit of ATP synthase (complex V) (oxidative phosphorylation). RNAi effect not checked in C. suppressalis",
+
+          "gene_family": "Mitochondrial OXPHOS – Complex V (ATP synthase F0)",
+
+          "organism": "Chilo suppressalis",
+
+          "taxonomy_id": "168631"
+
+        },
+
+        {
+
+          "gene_name": "ATP8",
+
+          "gene_identifier": 10743965,
+
+          "accession": "NC_015612.1",
+
+          "accession_status": "verified",
+
+          "accession_status_source": "Verified",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "MT",
+
+          "start_bp": 3926,
+
+          "end_bp": 4090,
+
+          "orientation": "plus",
+
+          "length_bp": 165,
+
+          "fasta_reference": "FASTA: NC_015612.1:3926..4090",
+
+          "ncbi_search_reference": "NCBI Gene: 10743965",
+
+          "source_workbook": "Chilo_suppressalis_13_genes.xlsx",
+
+          "source_sheet": "C_suppressalis_13_genes",
+
+          "source_row": 14,
+
+          "source_information": "NCBI Gene export you provided (gene_result (2).txt): GeneID 10743965, status live, RefSeq mitogenome NC_015612.1, positions 3926..4090",
+
+          "notes": "Mitochondrial gene on the plus strand. Overlaps ATP6 by 7 bp (positions 4084–4090) according to the file coordinates.",
+
+          "literature_source": "NCBI Gene export (gene_result (2).txt), GeneID 10743965",
+
+          "function": "ATP synthase F0 subunit 8; mitochondrial-encoded subunit of ATP synthase (complex V) (oxidative phosphorylation). RNAi effect not checked in C. suppressalis",
+
+          "gene_family": "Mitochondrial OXPHOS – Complex V (ATP synthase F0)",
+
+          "organism": "Chilo suppressalis",
+
+          "taxonomy_id": "168631"
+
+        },
+
+        {
+
+          "gene_name": "COX2",
+
+          "gene_identifier": 10743964,
+
+          "accession": "NC_015612.1",
+
+          "accession_status": "verified",
+
+          "accession_status_source": "Verified",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "MT",
+
+          "start_bp": 3105,
+
+          "end_bp": 3786,
+
+          "orientation": "plus",
+
+          "length_bp": 682,
+
+          "fasta_reference": "FASTA: NC_015612.1:3105..3786",
+
+          "ncbi_search_reference": "NCBI Gene: 10743964",
+
+          "source_workbook": "Chilo_suppressalis_13_genes.xlsx",
+
+          "source_sheet": "C_suppressalis_13_genes",
+
+          "source_row": 15,
+
+          "source_information": "NCBI Gene export you provided (gene_result (2).txt): GeneID 10743964, status live, RefSeq mitogenome NC_015612.1, positions 3105..3786",
+
+          "notes": "Mitochondrial gene on the plus strand.",
+
+          "literature_source": "NCBI Gene export (gene_result (2).txt), GeneID 10743964",
+
+          "function": "Cytochrome c oxidase subunit II; mitochondrial-encoded subunit of respiratory chain complex IV (oxidative phosphorylation). RNAi effect not checked in C. suppressalis",
+
+          "gene_family": "Mitochondrial OXPHOS – Complex IV (cytochrome c oxidase)",
+
+          "organism": "Chilo suppressalis",
+
+          "taxonomy_id": "168631"
+
+        },
+
+        {
+
+          "gene_name": "COX1",
+
+          "gene_identifier": 10743963,
+
+          "accession": "NC_015612.1",
+
+          "accession_status": "verified",
+
+          "accession_status_source": "Verified",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "MT",
+
+          "start_bp": 1507,
+
+          "end_bp": 3037,
+
+          "orientation": "plus",
+
+          "length_bp": 1531,
+
+          "fasta_reference": "FASTA: NC_015612.1:1507..3037",
+
+          "ncbi_search_reference": "NCBI Gene: 10743963",
+
+          "source_workbook": "Chilo_suppressalis_13_genes.xlsx",
+
+          "source_sheet": "C_suppressalis_13_genes",
+
+          "source_row": 16,
+
+          "source_information": "NCBI Gene export you provided (gene_result (2).txt): GeneID 10743963, status live, RefSeq mitogenome NC_015612.1, positions 1507..3037",
+
+          "notes": "Mitochondrial gene on the plus strand.",
+
+          "literature_source": "NCBI Gene export (gene_result (2).txt), GeneID 10743963",
+
+          "function": "Cytochrome c oxidase subunit I; mitochondrial-encoded catalytic subunit of respiratory chain complex IV (oxidative phosphorylation). RNAi effect not checked in C. suppressalis",
+
+          "gene_family": "Mitochondrial OXPHOS – Complex IV (cytochrome c oxidase)",
+
+          "organism": "Chilo suppressalis",
+
+          "taxonomy_id": "168631"
+
+        },
+
+        {
+
+          "gene_name": "CsEcR (EcR-A)",
+
+          "gene_identifier": null,
+
+          "accession": "AB067811.1",
+
+          "accession_status": "verified",
+
+          "accession_status_source": "Verified",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "All C. suppressalis mRNA records (NCBI search)",
+
+          "start_bp": null,
+
+          "end_bp": null,
+
+          "orientation": null,
+
+          "length_bp": null,
+
+          "fasta_reference": "FASTA: AB067811.1",
+
+          "ncbi_search_reference": "Search NCBI Gene: CsEcR (EcR-A)",
+
+          "source_workbook": "Chilo_suppressalis_20_genes.xlsx",
+
+          "source_sheet": "C_suppressalis_20_genes",
+
+          "source_row": 4,
+
+          "source_information": "Zhu et al. 2016, Sci Rep 6:28697, Table 2 (ecrA; best BLAST hit, species C. suppressalis, 98% identity to unigene)",
+
+          "notes": "Candidate by analogy to EcR RNAi in other insects. Record not opened at NCBI – confirm it is the EcR-A isoform",
+
+          "literature_source": "Zhu et al. 2016, Sci Rep 6:28697",
+
+          "function": "Ecdysone receptor; drives molting and metamorphosis. EcR mRNA fell in all four 20E-pathway RNAi groups (Zhu 2016); no direct EcR-RNAi mortality data found for this species",
+
+          "gene_family": "Nuclear receptor",
+
+          "organism": "Chilo suppressalis",
+
+          "taxonomy_id": "168631"
+
+        },
+
+        {
+
+          "gene_name": "CsUSP",
+
+          "gene_identifier": null,
+
+          "accession": "AB081840.1",
+
+          "accession_status": "verified",
+
+          "accession_status_source": "Verified",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "All C. suppressalis mRNA records (NCBI search)",
+
+          "start_bp": null,
+
+          "end_bp": null,
+
+          "orientation": null,
+
+          "length_bp": null,
+
+          "fasta_reference": "FASTA: AB081840.1",
+
+          "ncbi_search_reference": "Search NCBI Gene: CsUSP",
+
+          "source_workbook": "Chilo_suppressalis_20_genes.xlsx",
+
+          "source_sheet": "C_suppressalis_20_genes",
+
+          "source_row": 5,
+
+          "source_information": "Zhu et al. 2016, Sci Rep 6:28697, Table 2 (usp; best BLAST hit, species C. suppressalis, 100% identity to unigene)",
+
+          "notes": "No direct USP-RNAi data found for this species in sources checked",
+
+          "literature_source": "Zhu et al. 2016, Sci Rep 6:28697",
+
+          "function": "Ultraspiracle (RXR partner of EcR); needed for 20E signalling",
+
+          "gene_family": "Nuclear receptor",
+
+          "organism": "Chilo suppressalis",
+
+          "taxonomy_id": "168631"
+
+        },
+
+        {
+
+          "gene_name": "Csp38 (MAPK p38)",
+
+          "gene_identifier": null,
+
+          "accession": "KU358549",
+
+          "accession_status": "verified",
+
+          "accession_status_source": "Verified",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "All C. suppressalis mRNA records (NCBI search)",
+
+          "start_bp": null,
+
+          "end_bp": null,
+
+          "orientation": null,
+
+          "length_bp": null,
+
+          "fasta_reference": "FASTA: KU358549",
+
+          "ncbi_search_reference": "Search NCBI Gene: Csp38 (MAPK p38)",
+
+          "source_workbook": "Chilo_suppressalis_20_genes.xlsx",
+
+          "source_sheet": "C_suppressalis_20_genes",
+
+          "source_row": 6,
+
+          "source_information": "Sci Rep 7:43964 (2017): p38 cDNA, GenBank KU358549 (82 bp 5′UTR, 981 bp 3′UTR, 1,080 bp ORF)",
+
+          "notes": "Useful as a Bt-synergy target rather than a stand-alone killer",
+
+          "literature_source": "Sci Rep 7:43964 (2017), MAPK p38 / Cry1Ca study",
+
+          "function": "Stress/immune MAPK; knockdown raised susceptibility of larvae to Cry1Ca toxin (dsRNA fed in diet or on rice)",
+
+          "gene_family": "MAPK signalling",
+
+          "organism": "Chilo suppressalis",
+
+          "taxonomy_id": "168631"
+
+        },
+
+        {
+
+          "gene_name": "CsJNK",
+
+          "gene_identifier": null,
+
+          "accession": "KU358550",
+
+          "accession_status": "verified",
+
+          "accession_status_source": "Verified",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "All C. suppressalis mRNA records (NCBI search)",
+
+          "start_bp": null,
+
+          "end_bp": null,
+
+          "orientation": null,
+
+          "length_bp": null,
+
+          "fasta_reference": "FASTA: KU358550",
+
+          "ncbi_search_reference": "Search NCBI Gene: CsJNK",
+
+          "source_workbook": "Chilo_suppressalis_20_genes.xlsx",
+
+          "source_sheet": "C_suppressalis_20_genes",
+
+          "source_row": 7,
+
+          "source_information": "Sci Rep 7:43964 (2017): partial cDNA 1,392 bp, GenBank KU358550",
+
+          "notes": "Partial cDNA",
+
+          "literature_source": "Sci Rep 7:43964 (2017)",
+
+          "function": "JNK MAPK; knockdown tested with Cry1Ca in same study",
+
+          "gene_family": "MAPK signalling",
+
+          "organism": "Chilo suppressalis",
+
+          "taxonomy_id": "168631"
+
+        },
+
+        {
+
+          "gene_name": "CsERK1",
+
+          "gene_identifier": null,
+
+          "accession": "KU358551",
+
+          "accession_status": "verified",
+
+          "accession_status_source": "Verified",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "All C. suppressalis mRNA records (NCBI search)",
+
+          "start_bp": null,
+
+          "end_bp": null,
+
+          "orientation": null,
+
+          "length_bp": null,
+
+          "fasta_reference": "FASTA: KU358551",
+
+          "ncbi_search_reference": "Search NCBI Gene: CsERK1",
+
+          "source_workbook": "Chilo_suppressalis_20_genes.xlsx",
+
+          "source_sheet": "C_suppressalis_20_genes",
+
+          "source_row": 8,
+
+          "source_information": "Sci Rep 7:43964 (2017): ERK1 cDNA 1,892 bp, GenBank KU358551",
+
+          "notes": null,
+
+          "literature_source": "Sci Rep 7:43964 (2017)",
+
+          "function": "ERK1 MAPK; knockdown tested with Cry1Ca in same study",
+
+          "gene_family": "MAPK signalling",
+
+          "organism": "Chilo suppressalis",
+
+          "taxonomy_id": "168631"
+
+        },
+
+        {
+
+          "gene_name": "CsERK2",
+
+          "gene_identifier": null,
+
+          "accession": "KU358552",
+
+          "accession_status": "verified",
+
+          "accession_status_source": "Verified",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "All C. suppressalis mRNA records (NCBI search)",
+
+          "start_bp": null,
+
+          "end_bp": null,
+
+          "orientation": null,
+
+          "length_bp": null,
+
+          "fasta_reference": "FASTA: KU358552",
+
+          "ncbi_search_reference": "Search NCBI Gene: CsERK2",
+
+          "source_workbook": "Chilo_suppressalis_20_genes.xlsx",
+
+          "source_sheet": "C_suppressalis_20_genes",
+
+          "source_row": 9,
+
+          "source_information": "Sci Rep 7:43964 (2017): ERK2 cDNA 2,015 bp, GenBank KU358552",
+
+          "notes": null,
+
+          "literature_source": "Sci Rep 7:43964 (2017)",
+
+          "function": "ERK2 MAPK; knockdown tested with Cry1Ca in same study",
+
+          "gene_family": "MAPK signalling",
+
+          "organism": "Chilo suppressalis",
+
+          "taxonomy_id": "168631"
+
+        },
+
+        {
+
+          "gene_name": "CsUGT40AL1",
+
+          "gene_identifier": null,
+
+          "accession": "MK135483",
+
+          "accession_status": "verified",
+
+          "accession_status_source": "Verified",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "All C. suppressalis mRNA records (NCBI search)",
+
+          "start_bp": null,
+
+          "end_bp": null,
+
+          "orientation": null,
+
+          "length_bp": null,
+
+          "fasta_reference": "FASTA: MK135483",
+
+          "ncbi_search_reference": "Search NCBI Gene: CsUGT40AL1",
+
+          "source_workbook": "Chilo_suppressalis_20_genes.xlsx",
+
+          "source_sheet": "C_suppressalis_20_genes",
+
+          "source_row": 10,
+
+          "source_information": "Zhao et al. 2019, Int J Mol Sci 20:1064, Table 2 (CsUGT40AL1, MK135483)",
+
+          "notes": "Gene set deposited as MK135471–MK135494. Effect shown with insecticide present (resistance-breaking target)",
+
+          "literature_source": "Zhao et al. 2019, Int J Mol Sci 20(5):1064",
+
+          "function": "UDP-glycosyltransferase overexpressed in chlorantraniliprole-resistant larvae; dsRNA injection cut expression 69.34% and raised mortality to 81.33% (vs 35.42% dsEGFP) under insecticide",
+
+          "gene_family": "Detoxification (UGT)",
+
+          "organism": "Chilo suppressalis",
+
+          "taxonomy_id": "168631"
+
+        },
+
+        {
+
+          "gene_name": "CsUGT33AG3",
+
+          "gene_identifier": null,
+
+          "accession": "MK135474",
+
+          "accession_status": "verified",
+
+          "accession_status_source": "Verified",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "All C. suppressalis mRNA records (NCBI search)",
+
+          "start_bp": null,
+
+          "end_bp": null,
+
+          "orientation": null,
+
+          "length_bp": null,
+
+          "fasta_reference": "FASTA: MK135474",
+
+          "ncbi_search_reference": "Search NCBI Gene: CsUGT33AG3",
+
+          "source_workbook": "Chilo_suppressalis_20_genes.xlsx",
+
+          "source_sheet": "C_suppressalis_20_genes",
+
+          "source_row": 11,
+
+          "source_information": "Zhao et al. 2019, Int J Mol Sci 20:1064, Table 2 (CsUGT33AG3, MK135474)",
+
+          "notes": "Same study and caveat as CsUGT40AL1",
+
+          "literature_source": "Zhao et al. 2019, Int J Mol Sci 20(5):1064",
+
+          "function": "UDP-glycosyltransferase; dsRNA injection cut expression 48.74% and raised mortality to 54.67% (vs 35.42% control) under chlorantraniliprole",
+
+          "gene_family": "Detoxification (UGT)",
+
+          "organism": "Chilo suppressalis",
+
+          "taxonomy_id": "168631"
+
+        },
+
+        {
+
+          "gene_name": "CsCAD1 (cadherin)",
+
+          "gene_identifier": null,
+
+          "accession": "AY118272",
+
+          "accession_status": "verified",
+
+          "accession_status_source": "Verified",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "All C. suppressalis mRNA records (NCBI search)",
+
+          "start_bp": null,
+
+          "end_bp": null,
+
+          "orientation": null,
+
+          "length_bp": null,
+
+          "fasta_reference": "FASTA: AY118272",
+
+          "ncbi_search_reference": "Search NCBI Gene: CsCAD1 (cadherin)",
+
+          "source_workbook": "Chilo_suppressalis_20_genes.xlsx",
+
+          "source_sheet": "C_suppressalis_20_genes",
+
+          "source_row": 12,
+
+          "source_information": "Zhang et al. 2017, Sci Rep 7:5992 (CsCAD1, AY118272)",
+
+          "notes": "Protein AAM78590.1. Second gene CsCAD2 has protein AGG36450.1 only – nucleotide accession not found, so not listed",
+
+          "literature_source": "Zhang et al. 2017, Sci Rep 7:5992",
+
+          "function": "Midgut Bt-toxin receptor; knockdown REDUCED sensitivity to Cry2A and Cry1C (useful for resistance studies, not as a kill target)",
+
+          "gene_family": "Cadherin / Bt receptor",
+
+          "organism": "Chilo suppressalis",
+
+          "taxonomy_id": "168631"
+
+        },
+
+        {
+
+          "gene_name": "CsCHS1",
+
+          "gene_identifier": null,
+
+          "accession": null,
+
+          "accession_status": "unresolved",
+
+          "accession_status_source": "Not verified – retrieve from NCBI",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "All C. suppressalis mRNA records (NCBI search)",
+
+          "start_bp": null,
+
+          "end_bp": null,
+
+          "orientation": null,
+
+          "length_bp": null,
+
+          "fasta_reference": "Accession needed",
+
+          "ncbi_search_reference": "Search NCBI Gene: CsCHS1",
+
+          "source_workbook": "Chilo_suppressalis_20_genes.xlsx",
+
+          "source_sheet": "C_suppressalis_20_genes",
+
+          "source_row": 13,
+
+          "source_information": "Not found in sources checked",
+
+          "notes": "Two transcript variants (CsCHS1a, CsCHS1b) – pick the accession for the isoform you need",
+
+          "literature_source": "Zeng et al. 2023, Insect Sci 30:661 (doi 10.1111/1744-7917.13134)",
+
+          "function": "Chitin synthase 1 (cuticle); RNAi inhibited molting and pupation; CRISPR knockout cut hatching, survival, pupation and eclosion",
+
+          "gene_family": "Chitin synthesis",
+
+          "organism": "Chilo suppressalis",
+
+          "taxonomy_id": "168631"
+
+        },
+
+        {
+
+          "gene_name": "CsCHS2",
+
+          "gene_identifier": null,
+
+          "accession": null,
+
+          "accession_status": "unresolved",
+
+          "accession_status_source": "Not verified – retrieve from NCBI",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "All C. suppressalis mRNA records (NCBI search)",
+
+          "start_bp": null,
+
+          "end_bp": null,
+
+          "orientation": null,
+
+          "length_bp": null,
+
+          "fasta_reference": "Accession needed",
+
+          "ncbi_search_reference": "Search NCBI Gene: CsCHS2",
+
+          "source_workbook": "Chilo_suppressalis_20_genes.xlsx",
+
+          "source_sheet": "C_suppressalis_20_genes",
+
+          "source_row": 14,
+
+          "source_information": "Not found in sources checked",
+
+          "notes": "Accession not shown in the abstract/pages checked",
+
+          "literature_source": "Zeng et al. 2023, Insect Sci 30:661",
+
+          "function": "Chitin synthase 2 (midgut/peritrophic matrix); knockdown slowed larval growth but not pupation",
+
+          "gene_family": "Chitin synthesis",
+
+          "organism": "Chilo suppressalis",
+
+          "taxonomy_id": "168631"
+
+        },
+
+        {
+
+          "gene_name": "Csace1 (AChE1)",
+
+          "gene_identifier": null,
+
+          "accession": null,
+
+          "accession_status": "unresolved",
+
+          "accession_status_source": "Not verified – retrieve from NCBI",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "All C. suppressalis mRNA records (NCBI search)",
+
+          "start_bp": null,
+
+          "end_bp": null,
+
+          "orientation": null,
+
+          "length_bp": null,
+
+          "fasta_reference": "Accession needed",
+
+          "ncbi_search_reference": "Search NCBI Gene: Csace1 (AChE1)",
+
+          "source_workbook": "Chilo_suppressalis_20_genes.xlsx",
+
+          "source_sheet": "C_suppressalis_20_genes",
+
+          "source_row": 15,
+
+          "source_information": "Not found in sources checked",
+
+          "notes": "Triazophos-resistance mutation A314S described in Ch-ace1 (Jiang 2009)",
+
+          "literature_source": "Hui et al. 2011, Insect Mol Biol 20:507; Jiang et al. 2009, BBRC 378:269 (cloning)",
+
+          "function": "Acetylcholinesterase 1; siRNA gave ~25% mortality, smaller larvae, malformation and motor disability",
+
+          "gene_family": "Neurotransmission (AChE)",
+
+          "organism": "Chilo suppressalis",
+
+          "taxonomy_id": "168631"
+
+        },
+
+        {
+
+          "gene_name": "Csptth",
+
+          "gene_identifier": null,
+
+          "accession": null,
+
+          "accession_status": "unresolved",
+
+          "accession_status_source": "Not verified – retrieve from NCBI",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "All C. suppressalis mRNA records (NCBI search)",
+
+          "start_bp": null,
+
+          "end_bp": null,
+
+          "orientation": null,
+
+          "length_bp": null,
+
+          "fasta_reference": "Accession needed",
+
+          "ncbi_search_reference": "Search NCBI Gene: Csptth",
+
+          "source_workbook": "Chilo_suppressalis_20_genes.xlsx",
+
+          "source_sheet": "C_suppressalis_20_genes",
+
+          "source_row": 16,
+
+          "source_information": "Not found in sources checked",
+
+          "notes": "Zhu 2016 Table 2 lists only best-BLAST hits from other species (e.g. AY172671.1, H. virescens) – NOT C. suppressalis, so not used",
+
+          "literature_source": "Zhu et al. 2016, Sci Rep 6:28697",
+
+          "function": "Prothoracicotropic hormone; dsRNA feeding cut 15-day larval survival by 38% and delayed development",
+
+          "gene_family": "Neuropeptide hormone (PTTH)",
+
+          "organism": "Chilo suppressalis",
+
+          "taxonomy_id": "168631"
+
+        },
+
+        {
+
+          "gene_name": "Cstorso",
+
+          "gene_identifier": null,
+
+          "accession": null,
+
+          "accession_status": "unresolved",
+
+          "accession_status_source": "Not verified – retrieve from NCBI",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "All C. suppressalis mRNA records (NCBI search)",
+
+          "start_bp": null,
+
+          "end_bp": null,
+
+          "orientation": null,
+
+          "length_bp": null,
+
+          "fasta_reference": "Accession needed",
+
+          "ncbi_search_reference": "Search NCBI Gene: Cstorso",
+
+          "source_workbook": "Chilo_suppressalis_20_genes.xlsx",
+
+          "source_sheet": "C_suppressalis_20_genes",
+
+          "source_row": 17,
+
+          "source_information": "Not found in sources checked",
+
+          "notes": "Best-BLAST hit in paper is B. mori NM_001170578.1 – not used",
+
+          "literature_source": "Zhu et al. 2016, Sci Rep 6:28697",
+
+          "function": "PTTH receptor tyrosine kinase; dsRNA feeding cut survival by 56%",
+
+          "gene_family": "Receptor tyrosine kinase",
+
+          "organism": "Chilo suppressalis",
+
+          "taxonomy_id": "168631"
+
+        },
+
+        {
+
+          "gene_name": "Csspook (CYP307A1)",
+
+          "gene_identifier": null,
+
+          "accession": null,
+
+          "accession_status": "unresolved",
+
+          "accession_status_source": "Not verified – retrieve from NCBI",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "All C. suppressalis mRNA records (NCBI search)",
+
+          "start_bp": null,
+
+          "end_bp": null,
+
+          "orientation": null,
+
+          "length_bp": null,
+
+          "fasta_reference": "Accession needed",
+
+          "ncbi_search_reference": "Search NCBI Gene: Csspook (CYP307A1)",
+
+          "source_workbook": "Chilo_suppressalis_20_genes.xlsx",
+
+          "source_sheet": "C_suppressalis_20_genes",
+
+          "source_row": 18,
+
+          "source_information": "Not found in sources checked",
+
+          "notes": "Best-BLAST hit in paper is S. littoralis FJ981602.1 – not used",
+
+          "literature_source": "Zhu et al. 2016, Sci Rep 6:28697",
+
+          "function": "Halloween P450 for ecdysone synthesis; dsRNA feeding cut survival by 32%",
+
+          "gene_family": "Cytochrome P450 (Halloween)",
+
+          "organism": "Chilo suppressalis",
+
+          "taxonomy_id": "168631"
+
+        },
+
+        {
+
+          "gene_name": "Csnm-g (non-molting glossy)",
+
+          "gene_identifier": null,
+
+          "accession": null,
+
+          "accession_status": "unresolved",
+
+          "accession_status_source": "Not verified – retrieve from NCBI",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "All C. suppressalis mRNA records (NCBI search)",
+
+          "start_bp": null,
+
+          "end_bp": null,
+
+          "orientation": null,
+
+          "length_bp": null,
+
+          "fasta_reference": "Accession needed",
+
+          "ncbi_search_reference": "Search NCBI Gene: Csnm-g (non-molting glossy)",
+
+          "source_workbook": "Chilo_suppressalis_20_genes.xlsx",
+
+          "source_sheet": "C_suppressalis_20_genes",
+
+          "source_row": 19,
+
+          "source_information": "Not found in sources checked",
+
+          "notes": "Best-BLAST hit in paper is P. polytes AK402634.1 – not used",
+
+          "literature_source": "Zhu et al. 2016, Sci Rep 6:28697",
+
+          "function": "Short-chain dehydrogenase in ecdysone “Black Box”; dsRNA feeding cut survival by 67% (strongest of the four)",
+
+          "gene_family": "Short-chain dehydrogenase",
+
+          "organism": "Chilo suppressalis",
+
+          "taxonomy_id": "168631"
+
+        },
+
+        {
+
+          "gene_name": "CsCYP15C1",
+
+          "gene_identifier": null,
+
+          "accession": null,
+
+          "accession_status": "unresolved",
+
+          "accession_status_source": "Not verified – retrieve from NCBI",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "All C. suppressalis mRNA records (NCBI search)",
+
+          "start_bp": null,
+
+          "end_bp": null,
+
+          "orientation": null,
+
+          "length_bp": null,
+
+          "fasta_reference": "Accession needed",
+
+          "ncbi_search_reference": "Search NCBI Gene: CsCYP15C1",
+
+          "source_workbook": "Chilo_suppressalis_20_genes.xlsx",
+
+          "source_sheet": "C_suppressalis_20_genes",
+
+          "source_row": 20,
+
+          "source_information": "Not found in sources checked",
+
+          "notes": "Cloned from midgut",
+
+          "literature_source": "Sun et al. 2020, Pest Manag Sci (doi 10.1002/ps.5789)",
+
+          "function": "Juvenile-hormone epoxidase-like P450; knockdown raised mortality and caused abnormal molting; nanomaterial–dsRNA mixture worked better than naked dsRNA",
+
+          "gene_family": "Cytochrome P450 (JH synthesis)",
+
+          "organism": "Chilo suppressalis",
+
+          "taxonomy_id": "168631"
+
+        },
+
+        {
+
+          "gene_name": "CsC-factor",
+
+          "gene_identifier": null,
+
+          "accession": null,
+
+          "accession_status": "unresolved",
+
+          "accession_status_source": "Not verified – retrieve from NCBI",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "All C. suppressalis mRNA records (NCBI search)",
+
+          "start_bp": null,
+
+          "end_bp": null,
+
+          "orientation": null,
+
+          "length_bp": null,
+
+          "fasta_reference": "Accession needed",
+
+          "ncbi_search_reference": "Search NCBI Gene: CsC-factor",
+
+          "source_workbook": "Chilo_suppressalis_20_genes.xlsx",
+
+          "source_sheet": "C_suppressalis_20_genes",
+
+          "source_row": 21,
+
+          "source_information": "Not found in sources checked",
+
+          "notes": "Gene annotation of “C-factor” not confirmed – check before ordering primers",
+
+          "literature_source": "Pestic Biochem Physiol 2022 (ScienceDirect S004835752200150X); PubMed 36780173 (Dcr1/Dcr2)",
+
+          "function": "Lethal RNAi target; stacked dsCYP15C1 + dsC-factor with nanomaterial gave higher mortality than either alone. Dcr1/Dcr2 knockdown weakens its lethal effect",
+
+          "gene_family": "Not classified in sources checked",
+
+          "organism": "Chilo suppressalis",
+
+          "taxonomy_id": "168631"
+
+        },
+
+        {
+
+          "gene_name": "CsCYP4G90",
+
+          "gene_identifier": null,
+
+          "accession": null,
+
+          "accession_status": "unresolved",
+
+          "accession_status_source": "Not verified – retrieve from NCBI",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "All C. suppressalis mRNA records (NCBI search)",
+
+          "start_bp": null,
+
+          "end_bp": null,
+
+          "orientation": null,
+
+          "length_bp": null,
+
+          "fasta_reference": "Accession needed",
+
+          "ncbi_search_reference": "Search NCBI Gene: CsCYP4G90",
+
+          "source_workbook": "Chilo_suppressalis_20_genes.xlsx",
+
+          "source_sheet": "C_suppressalis_20_genes",
+
+          "source_row": 22,
+
+          "source_information": "Not found in sources checked",
+
+          "notes": "Sensitiser, not a stand-alone killer",
+
+          "literature_source": "Zhou et al. 2023, Int J Mol Sci 24(6):5461",
+
+          "function": "P450 up-regulated by cyproflanilide; RNAi raised mortality by 20% when larvae were dosed with the insecticide",
+
+          "gene_family": "Cytochrome P450 (CYP4)",
+
+          "organism": "Chilo suppressalis",
+
+          "taxonomy_id": "168631"
+
+        },
+
+        {
+
+          "gene_name": "CsCYP4AU10",
+
+          "gene_identifier": null,
+
+          "accession": null,
+
+          "accession_status": "unresolved",
+
+          "accession_status_source": "Not verified – retrieve from NCBI",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "All C. suppressalis mRNA records (NCBI search)",
+
+          "start_bp": null,
+
+          "end_bp": null,
+
+          "orientation": null,
+
+          "length_bp": null,
+
+          "fasta_reference": "Accession needed",
+
+          "ncbi_search_reference": "Search NCBI Gene: CsCYP4AU10",
+
+          "source_workbook": "Chilo_suppressalis_20_genes.xlsx",
+
+          "source_sheet": "C_suppressalis_20_genes",
+
+          "source_row": 23,
+
+          "source_information": "Not found in sources checked",
+
+          "notes": "Sensitiser, not a stand-alone killer",
+
+          "literature_source": "Zhou et al. 2023, Int J Mol Sci 24(6):5461",
+
+          "function": "P450 up-regulated by cyproflanilide; RNAi raised mortality by 18% under insecticide",
+
+          "gene_family": "Cytochrome P450 (CYP4)",
+
+          "organism": "Chilo suppressalis",
+
+          "taxonomy_id": "168631"
+
+        }
+
+      ]
+
+    },
+
+    {
+
+      "key": "sogatella_furcifera",
+
+      "scientific_name": "Sogatella furcifera",
+
+      "taxonomy_id": null,
+
+      "genes": [
+
+        {
+
+          "gene_name": "ATP6",
+
+          "gene_identifier": 15822692,
+
+          "accession": "NC_021417.1",
+
+          "accession_status": "verified",
+
+          "accession_status_source": "Verified",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "MT",
+
+          "start_bp": 3866,
+
+          "end_bp": 4520,
+
+          "orientation": "plus",
+
+          "length_bp": 655,
+
+          "fasta_reference": "FASTA: NC_021417.1:3866..4520",
+
+          "ncbi_search_reference": "NCBI Gene: 15822692",
+
+          "source_workbook": "Sogatella_furcifera_13_genes (1).xlsx",
+
+          "source_sheet": "S_furcifera_13_genes",
+
+          "source_row": 4,
+
+          "source_information": "NCBI Gene export you provided (gene_result_1.txt): GeneID 15822692, status live, RefSeq mitogenome NC_021417.1, positions 3866..4520",
+
+          "notes": "Mitochondrial gene on the plus strand. Overlaps ATP8 by 7 bp (positions 3866–3872) according to the file coordinates.",
+
+          "literature_source": "NCBI Gene export (gene_result_1.txt), GeneID 15822692",
+
+          "function": "ATP synthase F0 subunit 6; mitochondrial-encoded subunit of ATP synthase (complex V, oxidative phosphorylation). RNAi effect not checked in S. furcifera",
+
+          "gene_family": "Mitochondrial OXPHOS – Complex V (ATP synthase F0)",
+
+          "organism": "Sogatella furcifera",
+
+          "taxonomy_id": null
+
+        },
+
+        {
+
+          "gene_name": "ATP8",
+
+          "gene_identifier": 15822691,
+
+          "accession": "NC_021417.1",
+
+          "accession_status": "verified",
+
+          "accession_status_source": "Verified",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "MT",
+
+          "start_bp": 3771,
+
+          "end_bp": 3872,
+
+          "orientation": "plus",
+
+          "length_bp": 102,
+
+          "fasta_reference": "FASTA: NC_021417.1:3771..3872",
+
+          "ncbi_search_reference": "NCBI Gene: 15822691",
+
+          "source_workbook": "Sogatella_furcifera_13_genes (1).xlsx",
+
+          "source_sheet": "S_furcifera_13_genes",
+
+          "source_row": 5,
+
+          "source_information": "NCBI Gene export you provided (gene_result_1.txt): GeneID 15822691, status live, RefSeq mitogenome NC_021417.1, positions 3771..3872",
+
+          "notes": "Mitochondrial gene on the plus strand. Overlaps ATP6 by 7 bp (positions 3866–3872) according to the file coordinates.",
+
+          "literature_source": "NCBI Gene export (gene_result_1.txt), GeneID 15822691",
+
+          "function": "ATP synthase F0 subunit 8; mitochondrial-encoded subunit of ATP synthase (complex V, oxidative phosphorylation). RNAi effect not checked in S. furcifera",
+
+          "gene_family": "Mitochondrial OXPHOS – Complex V (ATP synthase F0)",
+
+          "organism": "Sogatella furcifera",
+
+          "taxonomy_id": null
+
+        },
+
+        {
+
+          "gene_name": "COX1",
+
+          "gene_identifier": 15822689,
+
+          "accession": "NC_021417.1",
+
+          "accession_status": "verified",
+
+          "accession_status_source": "Verified",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "MT",
+
+          "start_bp": 1375,
+
+          "end_bp": 2908,
+
+          "orientation": "plus",
+
+          "length_bp": 1534,
+
+          "fasta_reference": "FASTA: NC_021417.1:1375..2908",
+
+          "ncbi_search_reference": "NCBI Gene: 15822689",
+
+          "source_workbook": "Sogatella_furcifera_13_genes (1).xlsx",
+
+          "source_sheet": "S_furcifera_13_genes",
+
+          "source_row": 6,
+
+          "source_information": "NCBI Gene export you provided (gene_result_1.txt): GeneID 15822689, status live, RefSeq mitogenome NC_021417.1, positions 1375..2908",
+
+          "notes": "Mitochondrial gene on the plus strand.",
+
+          "literature_source": "NCBI Gene export (gene_result_1.txt), GeneID 15822689",
+
+          "function": "Cytochrome c oxidase subunit I; mitochondrial-encoded catalytic subunit of respiratory chain complex IV (oxidative phosphorylation). RNAi effect not checked in S. furcifera",
+
+          "gene_family": "Mitochondrial OXPHOS – Complex IV (cytochrome c oxidase)",
+
+          "organism": "Sogatella furcifera",
+
+          "taxonomy_id": null
+
+        },
+
+        {
+
+          "gene_name": "COX2",
+
+          "gene_identifier": 15822690,
+
+          "accession": "NC_021417.1",
+
+          "accession_status": "verified",
+
+          "accession_status_source": "Verified",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "MT",
+
+          "start_bp": 2974,
+
+          "end_bp": 3637,
+
+          "orientation": "plus",
+
+          "length_bp": 664,
+
+          "fasta_reference": "FASTA: NC_021417.1:2974..3637",
+
+          "ncbi_search_reference": "NCBI Gene: 15822690",
+
+          "source_workbook": "Sogatella_furcifera_13_genes (1).xlsx",
+
+          "source_sheet": "S_furcifera_13_genes",
+
+          "source_row": 7,
+
+          "source_information": "NCBI Gene export you provided (gene_result_1.txt): GeneID 15822690, status live, RefSeq mitogenome NC_021417.1, positions 2974..3637",
+
+          "notes": "Mitochondrial gene on the plus strand.",
+
+          "literature_source": "NCBI Gene export (gene_result_1.txt), GeneID 15822690",
+
+          "function": "Cytochrome c oxidase subunit II; mitochondrial-encoded subunit of respiratory chain complex IV (oxidative phosphorylation). RNAi effect not checked in S. furcifera",
+
+          "gene_family": "Mitochondrial OXPHOS – Complex IV (cytochrome c oxidase)",
+
+          "organism": "Sogatella furcifera",
+
+          "taxonomy_id": null
+
+        },
+
+        {
+
+          "gene_name": "COX3",
+
+          "gene_identifier": 15822693,
+
+          "accession": "NC_021417.1",
+
+          "accession_status": "verified",
+
+          "accession_status_source": "Verified",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "MT",
+
+          "start_bp": 4521,
+
+          "end_bp": 5301,
+
+          "orientation": "plus",
+
+          "length_bp": 781,
+
+          "fasta_reference": "FASTA: NC_021417.1:4521..5301",
+
+          "ncbi_search_reference": "NCBI Gene: 15822693",
+
+          "source_workbook": "Sogatella_furcifera_13_genes (1).xlsx",
+
+          "source_sheet": "S_furcifera_13_genes",
+
+          "source_row": 8,
+
+          "source_information": "NCBI Gene export you provided (gene_result_1.txt): GeneID 15822693, status live, RefSeq mitogenome NC_021417.1, positions 4521..5301",
+
+          "notes": "Mitochondrial gene on the plus strand.",
+
+          "literature_source": "NCBI Gene export (gene_result_1.txt), GeneID 15822693",
+
+          "function": "Cytochrome c oxidase subunit III; mitochondrial-encoded subunit of respiratory chain complex IV (oxidative phosphorylation). RNAi effect not checked in S. furcifera",
+
+          "gene_family": "Mitochondrial OXPHOS – Complex IV (cytochrome c oxidase)",
+
+          "organism": "Sogatella furcifera",
+
+          "taxonomy_id": null
+
+        },
+
+        {
+
+          "gene_name": "CYTB",
+
+          "gene_identifier": 15822699,
+
+          "accession": "NC_021417.1",
+
+          "accession_status": "verified",
+
+          "accession_status_source": "Verified",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "MT",
+
+          "start_bp": 10194,
+
+          "end_bp": 11295,
+
+          "orientation": "plus",
+
+          "length_bp": 1102,
+
+          "fasta_reference": "FASTA: NC_021417.1:10194..11295",
+
+          "ncbi_search_reference": "NCBI Gene: 15822699",
+
+          "source_workbook": "Sogatella_furcifera_13_genes (1).xlsx",
+
+          "source_sheet": "S_furcifera_13_genes",
+
+          "source_row": 9,
+
+          "source_information": "NCBI Gene export you provided (gene_result_1.txt): GeneID 15822699, status live, RefSeq mitogenome NC_021417.1, positions 10194..11295",
+
+          "notes": "Mitochondrial gene on the plus strand.",
+
+          "literature_source": "NCBI Gene export (gene_result_1.txt), GeneID 15822699",
+
+          "function": "Cytochrome b; mitochondrial-encoded subunit of respiratory chain complex III (oxidative phosphorylation). RNAi effect not checked in S. furcifera",
+
+          "gene_family": "Mitochondrial OXPHOS – Complex III (cytochrome bc1)",
+
+          "organism": "Sogatella furcifera",
+
+          "taxonomy_id": null
+
+        },
+
+        {
+
+          "gene_name": "ND1",
+
+          "gene_identifier": 15822700,
+
+          "accession": "NC_021417.1",
+
+          "accession_status": "verified",
+
+          "accession_status_source": "Verified",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "MT",
+
+          "start_bp": 11369,
+
+          "end_bp": 12286,
+
+          "orientation": "minus",
+
+          "length_bp": 918,
+
+          "fasta_reference": "FASTA: NC_021417.1:11369..12286",
+
+          "ncbi_search_reference": "NCBI Gene: 15822700",
+
+          "source_workbook": "Sogatella_furcifera_13_genes (1).xlsx",
+
+          "source_sheet": "S_furcifera_13_genes",
+
+          "source_row": 10,
+
+          "source_information": "NCBI Gene export you provided (gene_result_1.txt): GeneID 15822700, status live, RefSeq mitogenome NC_021417.1, positions 11369..12286",
+
+          "notes": "Mitochondrial gene on the minus strand. The FASTA link (column H) uses strand=2, so it returns the reverse complement, i.e. the gene in coding orientation.",
+
+          "literature_source": "NCBI Gene export (gene_result_1.txt), GeneID 15822700",
+
+          "function": "NADH dehydrogenase subunit 1; mitochondrial-encoded subunit of respiratory chain complex I (oxidative phosphorylation). RNAi effect not checked in S. furcifera",
+
+          "gene_family": "Mitochondrial OXPHOS – Complex I (NADH dehydrogenase)",
+
+          "organism": "Sogatella furcifera",
+
+          "taxonomy_id": null
+
+        },
+
+        {
+
+          "gene_name": "ND2",
+
+          "gene_identifier": 15822701,
+
+          "accession": "NC_021417.1",
+
+          "accession_status": "verified",
+
+          "accession_status_source": "Verified",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "MT",
+
+          "start_bp": 196,
+
+          "end_bp": 1152,
+
+          "orientation": "plus",
+
+          "length_bp": 957,
+
+          "fasta_reference": "FASTA: NC_021417.1:196..1152",
+
+          "ncbi_search_reference": "NCBI Gene: 15822701",
+
+          "source_workbook": "Sogatella_furcifera_13_genes (1).xlsx",
+
+          "source_sheet": "S_furcifera_13_genes",
+
+          "source_row": 11,
+
+          "source_information": "NCBI Gene export you provided (gene_result_1.txt): GeneID 15822701, status live, RefSeq mitogenome NC_021417.1, positions 196..1152",
+
+          "notes": "Mitochondrial gene on the plus strand.",
+
+          "literature_source": "NCBI Gene export (gene_result_1.txt), GeneID 15822701",
+
+          "function": "NADH dehydrogenase subunit 2; mitochondrial-encoded subunit of respiratory chain complex I (oxidative phosphorylation). RNAi effect not checked in S. furcifera",
+
+          "gene_family": "Mitochondrial OXPHOS – Complex I (NADH dehydrogenase)",
+
+          "organism": "Sogatella furcifera",
+
+          "taxonomy_id": null
+
+        },
+
+        {
+
+          "gene_name": "ND3",
+
+          "gene_identifier": 15822694,
+
+          "accession": "NC_021417.1",
+
+          "accession_status": "verified",
+
+          "accession_status_source": "Verified",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "MT",
+
+          "start_bp": 5364,
+
+          "end_bp": 5712,
+
+          "orientation": "plus",
+
+          "length_bp": 349,
+
+          "fasta_reference": "FASTA: NC_021417.1:5364..5712",
+
+          "ncbi_search_reference": "NCBI Gene: 15822694",
+
+          "source_workbook": "Sogatella_furcifera_13_genes (1).xlsx",
+
+          "source_sheet": "S_furcifera_13_genes",
+
+          "source_row": 12,
+
+          "source_information": "NCBI Gene export you provided (gene_result_1.txt): GeneID 15822694, status live, RefSeq mitogenome NC_021417.1, positions 5364..5712",
+
+          "notes": "Mitochondrial gene on the plus strand.",
+
+          "literature_source": "NCBI Gene export (gene_result_1.txt), GeneID 15822694",
+
+          "function": "NADH dehydrogenase subunit 3; mitochondrial-encoded subunit of respiratory chain complex I (oxidative phosphorylation). RNAi effect not checked in S. furcifera",
+
+          "gene_family": "Mitochondrial OXPHOS – Complex I (NADH dehydrogenase)",
+
+          "organism": "Sogatella furcifera",
+
+          "taxonomy_id": null
+
+        },
+
+        {
+
+          "gene_name": "ND4",
+
+          "gene_identifier": 15822696,
+
+          "accession": "NC_021417.1",
+
+          "accession_status": "verified",
+
+          "accession_status_source": "Verified",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "MT",
+
+          "start_bp": 7821,
+
+          "end_bp": 9143,
+
+          "orientation": "minus",
+
+          "length_bp": 1323,
+
+          "fasta_reference": "FASTA: NC_021417.1:7821..9143",
+
+          "ncbi_search_reference": "NCBI Gene: 15822696",
+
+          "source_workbook": "Sogatella_furcifera_13_genes (1).xlsx",
+
+          "source_sheet": "S_furcifera_13_genes",
+
+          "source_row": 13,
+
+          "source_information": "NCBI Gene export you provided (gene_result_1.txt): GeneID 15822696, status live, RefSeq mitogenome NC_021417.1, positions 7821..9143",
+
+          "notes": "Mitochondrial gene on the minus strand. The FASTA link (column H) uses strand=2, so it returns the reverse complement, i.e. the gene in coding orientation. Overlaps ND4L by 7 bp (positions 9137–9143) according to the file coordinates.",
+
+          "literature_source": "NCBI Gene export (gene_result_1.txt), GeneID 15822696",
+
+          "function": "NADH dehydrogenase subunit 4; mitochondrial-encoded subunit of respiratory chain complex I (oxidative phosphorylation). RNAi effect not checked in S. furcifera",
+
+          "gene_family": "Mitochondrial OXPHOS – Complex I (NADH dehydrogenase)",
+
+          "organism": "Sogatella furcifera",
+
+          "taxonomy_id": null
+
+        },
+
+        {
+
+          "gene_name": "ND4L",
+
+          "gene_identifier": 15822697,
+
+          "accession": "NC_021417.1",
+
+          "accession_status": "verified",
+
+          "accession_status_source": "Verified",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "MT",
+
+          "start_bp": 9137,
+
+          "end_bp": 9409,
+
+          "orientation": "minus",
+
+          "length_bp": 273,
+
+          "fasta_reference": "FASTA: NC_021417.1:9137..9409",
+
+          "ncbi_search_reference": "NCBI Gene: 15822697",
+
+          "source_workbook": "Sogatella_furcifera_13_genes (1).xlsx",
+
+          "source_sheet": "S_furcifera_13_genes",
+
+          "source_row": 14,
+
+          "source_information": "NCBI Gene export you provided (gene_result_1.txt): GeneID 15822697, status live, RefSeq mitogenome NC_021417.1, positions 9137..9409",
+
+          "notes": "Mitochondrial gene on the minus strand. The FASTA link (column H) uses strand=2, so it returns the reverse complement, i.e. the gene in coding orientation. Overlaps ND4 by 7 bp (positions 9137–9143) according to the file coordinates.",
+
+          "literature_source": "NCBI Gene export (gene_result_1.txt), GeneID 15822697",
+
+          "function": "NADH dehydrogenase subunit 4L; mitochondrial-encoded subunit of respiratory chain complex I (oxidative phosphorylation). RNAi effect not checked in S. furcifera",
+
+          "gene_family": "Mitochondrial OXPHOS – Complex I (NADH dehydrogenase)",
+
+          "organism": "Sogatella furcifera",
+
+          "taxonomy_id": null
+
+        },
+
+        {
+
+          "gene_name": "ND5",
+
+          "gene_identifier": 15822695,
+
+          "accession": "NC_021417.1",
+
+          "accession_status": "verified",
+
+          "accession_status_source": "Verified",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "MT",
+
+          "start_bp": 6086,
+
+          "end_bp": 7760,
+
+          "orientation": "minus",
+
+          "length_bp": 1675,
+
+          "fasta_reference": "FASTA: NC_021417.1:6086..7760",
+
+          "ncbi_search_reference": "NCBI Gene: 15822695",
+
+          "source_workbook": "Sogatella_furcifera_13_genes (1).xlsx",
+
+          "source_sheet": "S_furcifera_13_genes",
+
+          "source_row": 15,
+
+          "source_information": "NCBI Gene export you provided (gene_result_1.txt): GeneID 15822695, status live, RefSeq mitogenome NC_021417.1, positions 6086..7760",
+
+          "notes": "Mitochondrial gene on the minus strand. The FASTA link (column H) uses strand=2, so it returns the reverse complement, i.e. the gene in coding orientation.",
+
+          "literature_source": "NCBI Gene export (gene_result_1.txt), GeneID 15822695",
+
+          "function": "NADH dehydrogenase subunit 5; mitochondrial-encoded subunit of respiratory chain complex I (oxidative phosphorylation). RNAi effect not checked in S. furcifera",
+
+          "gene_family": "Mitochondrial OXPHOS – Complex I (NADH dehydrogenase)",
+
+          "organism": "Sogatella furcifera",
+
+          "taxonomy_id": null
+
+        },
+
+        {
+
+          "gene_name": "ND6",
+
+          "gene_identifier": 15822698,
+
+          "accession": "NC_021417.1",
+
+          "accession_status": "verified",
+
+          "accession_status_source": "Verified",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "MT",
+
+          "start_bp": 9459,
+
+          "end_bp": 9968,
+
+          "orientation": "plus",
+
+          "length_bp": 510,
+
+          "fasta_reference": "FASTA: NC_021417.1:9459..9968",
+
+          "ncbi_search_reference": "NCBI Gene: 15822698",
+
+          "source_workbook": "Sogatella_furcifera_13_genes (1).xlsx",
+
+          "source_sheet": "S_furcifera_13_genes",
+
+          "source_row": 16,
+
+          "source_information": "NCBI Gene export you provided (gene_result_1.txt): GeneID 15822698, status live, RefSeq mitogenome NC_021417.1, positions 9459..9968",
+
+          "notes": "Mitochondrial gene on the plus strand.",
+
+          "literature_source": "NCBI Gene export (gene_result_1.txt), GeneID 15822698",
+
+          "function": "NADH dehydrogenase subunit 6; mitochondrial-encoded subunit of respiratory chain complex I (oxidative phosphorylation). RNAi effect not checked in S. furcifera",
+
+          "gene_family": "Mitochondrial OXPHOS – Complex I (NADH dehydrogenase)",
+
+          "organism": "Sogatella furcifera",
+
+          "taxonomy_id": null
+
+        },
+
+        {
+
+          "gene_name": "SfRan",
+
+          "gene_identifier": null,
+
+          "accession": null,
+
+          "accession_status": "unresolved",
+
+          "accession_status_source": "Not verified – retrieve from NCBI",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "Search NCBI Assembly: Sogatella furcifera",
+
+          "start_bp": null,
+
+          "end_bp": null,
+
+          "orientation": null,
+
+          "length_bp": null,
+
+          "fasta_reference": "Accession needed",
+
+          "ncbi_search_reference": "Search NCBI Gene: SfRan",
+
+          "source_workbook": "Sogatella_furcifera_20_genes.xlsx",
+
+          "source_sheet": "S_furcifera_20_genes",
+
+          "source_row": 4,
+
+          "source_information": "Not found in sources checked",
+
+          "notes": "Ortholog of the N. lugens target; S. furcifera accession not found in sources checked.",
+
+          "literature_source": "Candidate list (user-provided)",
+
+          "function": "Cell function, development and reproduction; RNAi studies reported lethal and reproductive effects (function/RNAi effect as listed for N. lugens; not checked in S. furcifera)",
+
+          "gene_family": "Small GTPase (Ran)",
+
+          "organism": "Sogatella furcifera",
+
+          "taxonomy_id": null
+
+        },
+
+        {
+
+          "gene_name": "SfSRP54",
+
+          "gene_identifier": null,
+
+          "accession": null,
+
+          "accession_status": "unresolved",
+
+          "accession_status_source": "Not verified – retrieve from NCBI",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "Search NCBI Assembly: Sogatella furcifera",
+
+          "start_bp": null,
+
+          "end_bp": null,
+
+          "orientation": null,
+
+          "length_bp": null,
+
+          "fasta_reference": "Accession needed",
+
+          "ncbi_search_reference": "Search NCBI Gene: SfSRP54",
+
+          "source_workbook": "Sogatella_furcifera_20_genes.xlsx",
+
+          "source_sheet": "S_furcifera_20_genes",
+
+          "source_row": 5,
+
+          "source_information": "Not found in sources checked",
+
+          "notes": "Ortholog of the N. lugens target; S. furcifera accession not found in sources checked.",
+
+          "literature_source": "Candidate list (user-provided)",
+
+          "function": "Signal recognition particle protein; candidate investigated in transgenic rice (function/RNAi effect as listed for N. lugens; not checked in S. furcifera)",
+
+          "gene_family": "Protein targeting (SRP)",
+
+          "organism": "Sogatella furcifera",
+
+          "taxonomy_id": null
+
+        },
+
+        {
+
+          "gene_name": "SfCPSF30",
+
+          "gene_identifier": null,
+
+          "accession": null,
+
+          "accession_status": "unresolved",
+
+          "accession_status_source": "Not verified – retrieve from NCBI",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "Search NCBI Assembly: Sogatella furcifera",
+
+          "start_bp": null,
+
+          "end_bp": null,
+
+          "orientation": null,
+
+          "length_bp": null,
+
+          "fasta_reference": "Accession needed",
+
+          "ncbi_search_reference": "Search NCBI Gene: SfCPSF30",
+
+          "source_workbook": "Sogatella_furcifera_20_genes.xlsx",
+
+          "source_sheet": "S_furcifera_20_genes",
+
+          "source_row": 6,
+
+          "source_information": "Not found in sources checked",
+
+          "notes": "Ortholog of the N. lugens target; S. furcifera accession not found in sources checked.",
+
+          "literature_source": "Candidate list (user-provided)",
+
+          "function": "mRNA processing; RNAi associated with developmental defects and increased mortality (function/RNAi effect as listed for N. lugens; not checked in S. furcifera)",
+
+          "gene_family": "mRNA 3' processing",
+
+          "organism": "Sogatella furcifera",
+
+          "taxonomy_id": null
+
+        },
+
+        {
+
+          "gene_name": "SfEcR",
+
+          "gene_identifier": null,
+
+          "accession": "JQ040016.1",
+
+          "accession_status": "verified",
+
+          "accession_status_source": "Verified",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "Search NCBI Assembly: Sogatella furcifera",
+
+          "start_bp": null,
+
+          "end_bp": null,
+
+          "orientation": null,
+
+          "length_bp": null,
+
+          "fasta_reference": "FASTA: JQ040016.1",
+
+          "ncbi_search_reference": "Search NCBI Gene: SfEcR",
+
+          "source_workbook": "Sogatella_furcifera_20_genes.xlsx",
+
+          "source_sheet": "S_furcifera_20_genes",
+
+          "source_row": 7,
+
+          "source_information": "NCBI Nucleotide record JQ040016.1 (GenBank header: \"Sogatella furcifera ecdysone receptor (EcR) mRNA, complete cds\"), from the FASTA file you downloaded",
+
+          "notes": "Verified against NCBI. Caution: the name \"SfEcR\" is also used for Spodoptera frugiperda EcR (AF411254) – do not mix them up.",
+
+          "literature_source": "GenBank record JQ040016.1 (associated publication not checked)",
+
+          "function": "Ecdysone receptor; involved in molting and development (function/RNAi effect as listed for N. lugens; not checked in S. furcifera)",
+
+          "gene_family": "Nuclear receptor",
+
+          "organism": "Sogatella furcifera",
+
+          "taxonomy_id": null
+
+        },
+
+        {
+
+          "gene_name": "SfCHS1",
+
+          "gene_identifier": null,
+
+          "accession": "KY350143",
+
+          "accession_status": "verified",
+
+          "accession_status_source": "Verified",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "Search NCBI Assembly: Sogatella furcifera",
+
+          "start_bp": null,
+
+          "end_bp": null,
+
+          "orientation": null,
+
+          "length_bp": null,
+
+          "fasta_reference": "FASTA: KY350143",
+
+          "ncbi_search_reference": "Search NCBI Gene: SfCHS1",
+
+          "source_workbook": "Sogatella_furcifera_20_genes.xlsx",
+
+          "source_sheet": "S_furcifera_20_genes",
+
+          "source_row": 8,
+
+          "source_information": "Sci Rep 2019 (doi 10.1038/s41598-018-37488-5): SfCHS1a = KY350143; SfCHS1b = KY350144 (full cDNA 6,408 bp)",
+
+          "notes": "KY350143 is splice variant SfCHS1a; the second variant SfCHS1b is KY350144. They differ in a region at cDNA positions 4115–4291. Confirm which variant you need.",
+
+          "literature_source": "Sci Rep 2019, doi 10.1038/s41598-018-37488-5 (SfCHS1 cloning + RNAi); J Insect Sci 2021, 21(4):9 (chitin deacetylases and SfCHS1)",
+
+          "function": "Chitin synthase 1; involved in cuticle formation. In S. furcifera, SfCHS1 dsRNA injection into nymphs gave malformed phenotypes and killed most treated nymphs",
+
+          "gene_family": "Chitin synthesis",
+
+          "organism": "Sogatella furcifera",
+
+          "taxonomy_id": null
+
+        },
+
+        {
+
+          "gene_name": "SfGST",
+
+          "gene_identifier": null,
+
+          "accession": null,
+
+          "accession_status": "ambiguous",
+
+          "accession_status_source": "Family – choose a member (9 verified, see notes)",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "Search NCBI Assembly: Sogatella furcifera",
+
+          "start_bp": null,
+
+          "end_bp": null,
+
+          "orientation": null,
+
+          "length_bp": null,
+
+          "fasta_reference": "Accession needed",
+
+          "ncbi_search_reference": "Search NCBI Gene: SfGST",
+
+          "source_workbook": "Sogatella_furcifera_20_genes.xlsx",
+
+          "source_sheet": "S_furcifera_20_genes",
+
+          "source_row": 9,
+
+          "source_information": "NCBI Nucleotide records in the FASTA file you downloaded (JQ917476.1–JQ917484.1)",
+
+          "notes": "GST is a multigene family – choose the member you want and type its accession into column E. Nine S. furcifera GST mRNAs (complete cds) are on NCBI: gstz1 JQ917484.1; gstd2 JQ917483.1; gste1 JQ917482.1; gstd1 JQ917481.1; gsts1 JQ917480.1; gsto1 JQ917479.1; gstm2 JQ917478.1; gstt1 JQ917477.1; gstm1 JQ917476.1.",
+
+          "literature_source": "Candidate list (user-provided)",
+
+          "function": "Glutathione S-transferase; involved in detoxification (function/RNAi effect as listed for N. lugens; not checked in S. furcifera)",
+
+          "gene_family": "Detoxification enzyme",
+
+          "organism": "Sogatella furcifera",
+
+          "taxonomy_id": null
+
+        },
+
+        {
+
+          "gene_name": "SfCaM",
+
+          "gene_identifier": null,
+
+          "accession": null,
+
+          "accession_status": "unresolved",
+
+          "accession_status_source": "Not verified – retrieve from NCBI",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "Search NCBI Assembly: Sogatella furcifera",
+
+          "start_bp": null,
+
+          "end_bp": null,
+
+          "orientation": null,
+
+          "length_bp": null,
+
+          "fasta_reference": "Accession needed",
+
+          "ncbi_search_reference": "Search NCBI Gene: SfCaM",
+
+          "source_workbook": "Sogatella_furcifera_20_genes.xlsx",
+
+          "source_sheet": "S_furcifera_20_genes",
+
+          "source_row": 10,
+
+          "source_information": "Not found in sources checked",
+
+          "notes": "Calmodulin itself was not in the NCBI file. The file has nine calcium/calmodulin-dependent protein kinase II (CaMKII) isoforms, MH807688.1–MH807696.1 (A1 688, B1 689, C1 690, C2 691, C3 692, D1 693, E1 694, E2 695, E3 696) – CaMKII is a different gene, so none is entered as SfCaM.",
+
+          "literature_source": "Candidate list (user-provided)",
+
+          "function": "Calmodulin; calcium-dependent cellular signalling (function/RNAi effect as listed for N. lugens; not checked in S. furcifera)",
+
+          "gene_family": "Ca2+ signalling",
+
+          "organism": "Sogatella furcifera",
+
+          "taxonomy_id": null
+
+        },
+
+        {
+
+          "gene_name": "SfHT1",
+
+          "gene_identifier": null,
+
+          "accession": null,
+
+          "accession_status": "unresolved",
+
+          "accession_status_source": "Not verified – retrieve from NCBI",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "Search NCBI Assembly: Sogatella furcifera",
+
+          "start_bp": null,
+
+          "end_bp": null,
+
+          "orientation": null,
+
+          "length_bp": null,
+
+          "fasta_reference": "Accession needed",
+
+          "ncbi_search_reference": "Search NCBI Gene: SfHT1",
+
+          "source_workbook": "Sogatella_furcifera_20_genes.xlsx",
+
+          "source_sheet": "S_furcifera_20_genes",
+
+          "source_row": 11,
+
+          "source_information": "Not found in sources checked",
+
+          "notes": "Also called ST1/Sfst1-type sugar transporter in planthopper literature; S. furcifera accession not found in sources checked.",
+
+          "literature_source": "Candidate list (user-provided)",
+
+          "function": "Hexose transporter; nutrient uptake in the midgut (function/RNAi effect as listed for N. lugens; not checked in S. furcifera)",
+
+          "gene_family": "Sugar transporter",
+
+          "organism": "Sogatella furcifera",
+
+          "taxonomy_id": null
+
+        },
+
+        {
+
+          "gene_name": "Sfcar",
+
+          "gene_identifier": null,
+
+          "accession": null,
+
+          "accession_status": "unresolved",
+
+          "accession_status_source": "Not verified – retrieve from NCBI",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "Search NCBI Assembly: Sogatella furcifera",
+
+          "start_bp": null,
+
+          "end_bp": null,
+
+          "orientation": null,
+
+          "length_bp": null,
+
+          "fasta_reference": "Accession needed",
+
+          "ncbi_search_reference": "Search NCBI Gene: Sfcar",
+
+          "source_workbook": "Sogatella_furcifera_20_genes.xlsx",
+
+          "source_sheet": "S_furcifera_20_genes",
+
+          "source_row": 12,
+
+          "source_information": "Not found in sources checked",
+
+          "notes": "Ortholog of the N. lugens target; S. furcifera accession not found in sources checked.",
+
+          "literature_source": "Candidate list (user-provided)",
+
+          "function": "Carboxypeptidase; digestive enzyme (function/RNAi effect as listed for N. lugens; not checked in S. furcifera)",
+
+          "gene_family": "Digestive enzyme",
+
+          "organism": "Sogatella furcifera",
+
+          "taxonomy_id": null
+
+        },
+
+        {
+
+          "gene_name": "Sftry",
+
+          "gene_identifier": null,
+
+          "accession": null,
+
+          "accession_status": "unresolved",
+
+          "accession_status_source": "Not verified – retrieve from NCBI",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "Search NCBI Assembly: Sogatella furcifera",
+
+          "start_bp": null,
+
+          "end_bp": null,
+
+          "orientation": null,
+
+          "length_bp": null,
+
+          "fasta_reference": "Accession needed",
+
+          "ncbi_search_reference": "Search NCBI Gene: Sftry",
+
+          "source_workbook": "Sogatella_furcifera_20_genes.xlsx",
+
+          "source_sheet": "S_furcifera_20_genes",
+
+          "source_row": 13,
+
+          "source_information": "Not found in sources checked",
+
+          "notes": "Ortholog of the N. lugens target; S. furcifera accession not found in sources checked.",
+
+          "literature_source": "Candidate list (user-provided)",
+
+          "function": "Trypsin-like serine protease; digestion (function/RNAi effect as listed for N. lugens; not checked in S. furcifera)",
+
+          "gene_family": "Digestive enzyme",
+
+          "organism": "Sogatella furcifera",
+
+          "taxonomy_id": null
+
+        },
+
+        {
+
+          "gene_name": "Sfflightin",
+
+          "gene_identifier": null,
+
+          "accession": "KC571476.1",
+
+          "accession_status": "verified",
+
+          "accession_status_source": "Verified",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "Search NCBI Assembly: Sogatella furcifera",
+
+          "start_bp": null,
+
+          "end_bp": null,
+
+          "orientation": null,
+
+          "length_bp": null,
+
+          "fasta_reference": "FASTA: KC571476.1",
+
+          "ncbi_search_reference": "Search NCBI Gene: Sfflightin",
+
+          "source_workbook": "Sogatella_furcifera_20_genes.xlsx",
+
+          "source_sheet": "S_furcifera_20_genes",
+
+          "source_row": 14,
+
+          "source_information": "NCBI Nucleotide record KC571476.1 (GenBank header: \"Sogatella furcifera flightin mRNA, complete cds\"), from the FASTA file you downloaded",
+
+          "notes": "Verified against NCBI.",
+
+          "literature_source": "GenBank record KC571476.1 (associated publication not checked)",
+
+          "function": "Flight-muscle structure and function (function/RNAi effect as listed for N. lugens; not checked in S. furcifera)",
+
+          "gene_family": "Muscle protein",
+
+          "organism": "Sogatella furcifera",
+
+          "taxonomy_id": null
+
+        },
+
+        {
+
+          "gene_name": "SfCPR",
+
+          "gene_identifier": null,
+
+          "accession": null,
+
+          "accession_status": "unresolved",
+
+          "accession_status_source": "Not verified – retrieve from NCBI",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "Search NCBI Assembly: Sogatella furcifera",
+
+          "start_bp": null,
+
+          "end_bp": null,
+
+          "orientation": null,
+
+          "length_bp": null,
+
+          "fasta_reference": "Accession needed",
+
+          "ncbi_search_reference": "Search NCBI Gene: SfCPR",
+
+          "source_workbook": "Sogatella_furcifera_20_genes.xlsx",
+
+          "source_sheet": "S_furcifera_20_genes",
+
+          "source_row": 15,
+
+          "source_information": "Not found in sources checked",
+
+          "notes": "In N. lugens literature NlCPR can mean NADPH-cytochrome P450 REDUCTASE, but your list describes it as a cuticular protein – check which one you want. S. furcifera accession not found in sources checked.",
+
+          "literature_source": "Candidate list (user-provided)",
+
+          "function": "Cuticular protein; cuticle structure and insecticide susceptibility (function/RNAi effect as listed for N. lugens; not checked in S. furcifera)",
+
+          "gene_family": "Cuticle protein",
+
+          "organism": "Sogatella furcifera",
+
+          "taxonomy_id": null
+
+        },
+
+        {
+
+          "gene_name": "SfCYP6AY1",
+
+          "gene_identifier": null,
+
+          "accession": null,
+
+          "accession_status": "unresolved",
+
+          "accession_status_source": "Not verified – retrieve from NCBI",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "Search NCBI Assembly: Sogatella furcifera",
+
+          "start_bp": null,
+
+          "end_bp": null,
+
+          "orientation": null,
+
+          "length_bp": null,
+
+          "fasta_reference": "Accession needed",
+
+          "ncbi_search_reference": "Search NCBI Gene: SfCYP6AY1",
+
+          "source_workbook": "Sogatella_furcifera_20_genes.xlsx",
+
+          "source_sheet": "S_furcifera_20_genes",
+
+          "source_row": 16,
+
+          "source_information": "Not found in sources checked",
+
+          "notes": "P450 family: S. furcifera has several CYP genes (see sulfoxaflor P450 study, Int J Mol Sci 2019, doi 10.3390/ijms20184573) – confirm the exact member. Accession not found in sources checked.",
+
+          "literature_source": "Candidate list (user-provided)",
+
+          "function": "Cytochrome P450 family; detoxification and insecticide metabolism (function/RNAi effect as listed for N. lugens; not checked in S. furcifera)",
+
+          "gene_family": "P450 detoxification",
+
+          "organism": "Sogatella furcifera",
+
+          "taxonomy_id": null
+
+        },
+
+        {
+
+          "gene_name": "Sfsid-1",
+
+          "gene_identifier": null,
+
+          "accession": null,
+
+          "accession_status": "unresolved",
+
+          "accession_status_source": "Not verified – retrieve from NCBI",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "Search NCBI Assembly: Sogatella furcifera",
+
+          "start_bp": null,
+
+          "end_bp": null,
+
+          "orientation": null,
+
+          "length_bp": null,
+
+          "fasta_reference": "Accession needed",
+
+          "ncbi_search_reference": "Search NCBI Gene: Sfsid-1",
+
+          "source_workbook": "Sogatella_furcifera_20_genes.xlsx",
+
+          "source_sheet": "S_furcifera_20_genes",
+
+          "source_row": 17,
+
+          "source_information": "Not found in sources checked",
+
+          "notes": "Ortholog of the N. lugens target; S. furcifera accession not found in sources checked.",
+
+          "literature_source": "Candidate list (user-provided)",
+
+          "function": "RNAi pathway-associated gene; useful for studying the insect's RNAi machinery (function/RNAi effect as listed for N. lugens; not checked in S. furcifera)",
+
+          "gene_family": "RNAi machinery (dsRNA uptake)",
+
+          "organism": "Sogatella furcifera",
+
+          "taxonomy_id": null
+
+        },
+
+        {
+
+          "gene_name": "Sfaub",
+
+          "gene_identifier": null,
+
+          "accession": null,
+
+          "accession_status": "unresolved",
+
+          "accession_status_source": "Not verified – retrieve from NCBI",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "Search NCBI Assembly: Sogatella furcifera",
+
+          "start_bp": null,
+
+          "end_bp": null,
+
+          "orientation": null,
+
+          "length_bp": null,
+
+          "fasta_reference": "Accession needed",
+
+          "ncbi_search_reference": "Search NCBI Gene: Sfaub",
+
+          "source_workbook": "Sogatella_furcifera_20_genes.xlsx",
+
+          "source_sheet": "S_furcifera_20_genes",
+
+          "source_row": 18,
+
+          "source_information": "Not found in sources checked",
+
+          "notes": "Ortholog of the N. lugens target; S. furcifera accession not found in sources checked.",
+
+          "literature_source": "Candidate list (user-provided)",
+
+          "function": "RNAi pathway-associated gene; relevant to RNAi biology (function/RNAi effect as listed for N. lugens; not checked in S. furcifera)",
+
+          "gene_family": "RNAi machinery (Argonaute/Piwi, Aubergine)",
+
+          "organism": "Sogatella furcifera",
+
+          "taxonomy_id": null
+
+        },
+
+        {
+
+          "gene_name": "SfRab2",
+
+          "gene_identifier": null,
+
+          "accession": null,
+
+          "accession_status": "unresolved",
+
+          "accession_status_source": "Not verified – retrieve from NCBI",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "Search NCBI Assembly: Sogatella furcifera",
+
+          "start_bp": null,
+
+          "end_bp": null,
+
+          "orientation": null,
+
+          "length_bp": null,
+
+          "fasta_reference": "Accession needed",
+
+          "ncbi_search_reference": "Search NCBI Gene: SfRab2",
+
+          "source_workbook": "Sogatella_furcifera_20_genes.xlsx",
+
+          "source_sheet": "S_furcifera_20_genes",
+
+          "source_row": 19,
+
+          "source_information": "Not found in sources checked",
+
+          "notes": "Ortholog of the N. lugens target; S. furcifera accession not found in sources checked.",
+
+          "literature_source": "Candidate list (user-provided)",
+
+          "function": "Intracellular vesicle trafficking; implicated in nymphal development (function/RNAi effect as listed for N. lugens; not checked in S. furcifera)",
+
+          "gene_family": "Rab GTPase",
+
+          "organism": "Sogatella furcifera",
+
+          "taxonomy_id": null
+
+        },
+
+        {
+
+          "gene_name": "SfRab7",
+
+          "gene_identifier": null,
+
+          "accession": null,
+
+          "accession_status": "unresolved",
+
+          "accession_status_source": "Not verified – retrieve from NCBI",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "Search NCBI Assembly: Sogatella furcifera",
+
+          "start_bp": null,
+
+          "end_bp": null,
+
+          "orientation": null,
+
+          "length_bp": null,
+
+          "fasta_reference": "Accession needed",
+
+          "ncbi_search_reference": "Search NCBI Gene: SfRab7",
+
+          "source_workbook": "Sogatella_furcifera_20_genes.xlsx",
+
+          "source_sheet": "S_furcifera_20_genes",
+
+          "source_row": 20,
+
+          "source_information": "Not found in sources checked",
+
+          "notes": "Ortholog of the N. lugens target; S. furcifera accession not found in sources checked.",
+
+          "literature_source": "Candidate list (user-provided)",
+
+          "function": "Intracellular trafficking and endosomal processes (function/RNAi effect as listed for N. lugens; not checked in S. furcifera)",
+
+          "gene_family": "Rab GTPase",
+
+          "organism": "Sogatella furcifera",
+
+          "taxonomy_id": null
+
+        },
+
+        {
+
+          "gene_name": "SfRab6",
+
+          "gene_identifier": null,
+
+          "accession": null,
+
+          "accession_status": "unresolved",
+
+          "accession_status_source": "Not verified – retrieve from NCBI",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "Search NCBI Assembly: Sogatella furcifera",
+
+          "start_bp": null,
+
+          "end_bp": null,
+
+          "orientation": null,
+
+          "length_bp": null,
+
+          "fasta_reference": "Accession needed",
+
+          "ncbi_search_reference": "Search NCBI Gene: SfRab6",
+
+          "source_workbook": "Sogatella_furcifera_20_genes.xlsx",
+
+          "source_sheet": "S_furcifera_20_genes",
+
+          "source_row": 21,
+
+          "source_information": "Not found in sources checked",
+
+          "notes": "Ortholog of the N. lugens target; S. furcifera accession not found in sources checked.",
+
+          "literature_source": "Candidate list (user-provided)",
+
+          "function": "Intracellular membrane trafficking (function/RNAi effect as listed for N. lugens; not checked in S. furcifera)",
+
+          "gene_family": "Rab GTPase",
+
+          "organism": "Sogatella furcifera",
+
+          "taxonomy_id": null
+
+        },
+
+        {
+
+          "gene_name": "SfSar1",
+
+          "gene_identifier": null,
+
+          "accession": null,
+
+          "accession_status": "unresolved",
+
+          "accession_status_source": "Not verified – retrieve from NCBI",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "Search NCBI Assembly: Sogatella furcifera",
+
+          "start_bp": null,
+
+          "end_bp": null,
+
+          "orientation": null,
+
+          "length_bp": null,
+
+          "fasta_reference": "Accession needed",
+
+          "ncbi_search_reference": "Search NCBI Gene: SfSar1",
+
+          "source_workbook": "Sogatella_furcifera_20_genes.xlsx",
+
+          "source_sheet": "S_furcifera_20_genes",
+
+          "source_row": 22,
+
+          "source_information": "Not found in sources checked",
+
+          "notes": "Ortholog of the N. lugens target; S. furcifera accession not found in sources checked.",
+
+          "literature_source": "Candidate list (user-provided)",
+
+          "function": "Vesicle transport; implicated in molting and eclosion (function/RNAi effect as listed for N. lugens; not checked in S. furcifera)",
+
+          "gene_family": "Arf-family GTPase (COPII)",
+
+          "organism": "Sogatella furcifera",
+
+          "taxonomy_id": null
+
+        },
+
+        {
+
+          "gene_name": "SfSRβ",
+
+          "gene_identifier": null,
+
+          "accession": null,
+
+          "accession_status": "unresolved",
+
+          "accession_status_source": "Not verified – retrieve from NCBI",
+
+          "sequence": null,
+
+          "sequence_source": null,
+
+          "chromosome_or_record": "Search NCBI Assembly: Sogatella furcifera",
+
+          "start_bp": null,
+
+          "end_bp": null,
+
+          "orientation": null,
+
+          "length_bp": null,
+
+          "fasta_reference": "Accession needed",
+
+          "ncbi_search_reference": "Search NCBI Gene: SfSRβ",
+
+          "source_workbook": "Sogatella_furcifera_20_genes.xlsx",
+
+          "source_sheet": "S_furcifera_20_genes",
+
+          "source_row": 23,
+
+          "source_information": "Not found in sources checked",
+
+          "notes": "Ortholog of the N. lugens target; S. furcifera accession not found in sources checked.",
+
+          "literature_source": "Candidate list (user-provided)",
+
+          "function": "Signal recognition particle receptor; implicated in development (function/RNAi effect as listed for N. lugens; not checked in S. furcifera)",
+
+          "gene_family": "Arf-family GTPase (SRP receptor β)",
+
+          "organism": "Sogatella furcifera",
+
+          "taxonomy_id": null
+
+        }
+
+      ]
+
+    },
+
+    {
+
+      "key": "nilaparvata_lugens",
+
+      "scientific_name": "Nilaparvata lugens",
+
+      "taxonomy_id": "108931",
+
+      "genes": [
+
+        {
+
+          "gene_name": "NlRan",
+
+          "gene_identifier": null,
+
+          "accession": "KT313028.1",
+
+          "accession_status": "verified",
+
+          "accession_status_source": "existing curated target FASTA",
+
+          "sequence": null,
+
+          "sequence_source": "nilaparvata_lugens_13_cds.fasta",
+
+          "chromosome_or_record": null,
+
+          "start_bp": null,
+
+          "end_bp": null,
+
+          "orientation": null,
+
+          "length_bp": 645,
+
+          "fasta_reference": "curated FASTA header: NlRan|accession=KT313028.1|cds_length=645",
+
+          "ncbi_search_reference": null,
+
+          "source_workbook": null,
+
+          "source_sheet": null,
+
+          "source_row": null,
+
+          "source_information": "existing dsGuard curated target FASTA",
+
+          "notes": null,
+
+          "literature_source": null,
+
+          "function": null,
+
+          "gene_family": null,
+
+          "organism": "Nilaparvata lugens",
+
+          "taxonomy_id": "108931"
+
+        },
+
+        {
+
+          "gene_name": "NlSRP54",
+
+          "gene_identifier": null,
+
+          "accession": "XM_022328877.2",
+
+          "accession_status": "verified",
+
+          "accession_status_source": "existing curated target FASTA",
+
+          "sequence": null,
+
+          "sequence_source": "nilaparvata_lugens_13_cds.fasta",
+
+          "chromosome_or_record": null,
+
+          "start_bp": null,
+
+          "end_bp": null,
+
+          "orientation": null,
+
+          "length_bp": 1530,
+
+          "fasta_reference": "curated FASTA header: NlSRP54|accession=XM_022328877.2|cds_length=1530",
+
+          "ncbi_search_reference": null,
+
+          "source_workbook": null,
+
+          "source_sheet": null,
+
+          "source_row": null,
+
+          "source_information": "existing dsGuard curated target FASTA",
+
+          "notes": null,
+
+          "literature_source": null,
+
+          "function": null,
+
+          "gene_family": null,
+
+          "organism": "Nilaparvata lugens",
+
+          "taxonomy_id": "108931"
+
+        },
+
+        {
+
+          "gene_name": "NlEcR",
+
+          "gene_identifier": null,
+
+          "accession": "FJ263048.1",
+
+          "accession_status": "verified",
+
+          "accession_status_source": "existing curated target FASTA",
+
+          "sequence": null,
+
+          "sequence_source": "nilaparvata_lugens_13_cds.fasta",
+
+          "chromosome_or_record": null,
+
+          "start_bp": null,
+
+          "end_bp": null,
+
+          "orientation": null,
+
+          "length_bp": 2067,
+
+          "fasta_reference": "curated FASTA header: NlEcR|accession=FJ263048.1|cds_length=2067",
+
+          "ncbi_search_reference": null,
+
+          "source_workbook": null,
+
+          "source_sheet": null,
+
+          "source_row": null,
+
+          "source_information": "existing dsGuard curated target FASTA",
+
+          "notes": null,
+
+          "literature_source": null,
+
+          "function": null,
+
+          "gene_family": null,
+
+          "organism": "Nilaparvata lugens",
+
+          "taxonomy_id": "108931"
+
+        },
+
+        {
+
+          "gene_name": "NlCHSA_NlCHS1",
+
+          "gene_identifier": null,
+
+          "accession": "JQ040014.1",
+
+          "accession_status": "verified",
+
+          "accession_status_source": "existing curated target FASTA",
+
+          "sequence": null,
+
+          "sequence_source": "nilaparvata_lugens_13_cds.fasta",
+
+          "chromosome_or_record": null,
+
+          "start_bp": null,
+
+          "end_bp": null,
+
+          "orientation": null,
+
+          "length_bp": 4737,
+
+          "fasta_reference": "curated FASTA header: NlCHSA_NlCHS1|accession=JQ040014.1|cds_length=4737",
+
+          "ncbi_search_reference": null,
+
+          "source_workbook": null,
+
+          "source_sheet": null,
+
+          "source_row": null,
+
+          "source_information": "existing dsGuard curated target FASTA",
+
+          "notes": null,
+
+          "literature_source": null,
+
+          "function": null,
+
+          "gene_family": null,
+
+          "organism": "Nilaparvata lugens",
+
+          "taxonomy_id": "108931"
+
+        },
+
+        {
+
+          "gene_name": "Nlcar",
+
+          "gene_identifier": null,
+
+          "accession": "JF915744.1",
+
+          "accession_status": "verified",
+
+          "accession_status_source": "existing curated target FASTA",
+
+          "sequence": null,
+
+          "sequence_source": "nilaparvata_lugens_13_cds.fasta",
+
+          "chromosome_or_record": null,
+
+          "start_bp": null,
+
+          "end_bp": null,
+
+          "orientation": null,
+
+          "length_bp": 675,
+
+          "fasta_reference": "curated FASTA header: Nlcar|accession=JF915744.1|cds_length=675",
+
+          "ncbi_search_reference": null,
+
+          "source_workbook": null,
+
+          "source_sheet": null,
+
+          "source_row": null,
+
+          "source_information": "existing dsGuard curated target FASTA",
+
+          "notes": null,
+
+          "literature_source": null,
+
+          "function": null,
+
+          "gene_family": null,
+
+          "organism": "Nilaparvata lugens",
+
+          "taxonomy_id": "108931"
+
+        },
+
+        {
+
+          "gene_name": "Nltry",
+
+          "gene_identifier": null,
+
+          "accession": "JF915745.1",
+
+          "accession_status": "verified",
+
+          "accession_status_source": "existing curated target FASTA",
+
+          "sequence": null,
+
+          "sequence_source": "nilaparvata_lugens_13_cds.fasta",
+
+          "chromosome_or_record": null,
+
+          "start_bp": null,
+
+          "end_bp": null,
+
+          "orientation": null,
+
+          "length_bp": 825,
+
+          "fasta_reference": "curated FASTA header: Nltry|accession=JF915745.1|cds_length=825",
+
+          "ncbi_search_reference": null,
+
+          "source_workbook": null,
+
+          "source_sheet": null,
+
+          "source_row": null,
+
+          "source_information": "existing dsGuard curated target FASTA",
+
+          "notes": null,
+
+          "literature_source": null,
+
+          "function": null,
+
+          "gene_family": null,
+
+          "organism": "Nilaparvata lugens",
+
+          "taxonomy_id": "108931"
+
+        },
+
+        {
+
+          "gene_name": "Nlsid-1",
+
+          "gene_identifier": null,
+
+          "accession": "JF915743.1",
+
+          "accession_status": "verified",
+
+          "accession_status_source": "existing curated target FASTA",
+
+          "sequence": null,
+
+          "sequence_source": "nilaparvata_lugens_13_cds.fasta",
+
+          "chromosome_or_record": null,
+
+          "start_bp": null,
+
+          "end_bp": null,
+
+          "orientation": null,
+
+          "length_bp": 1875,
+
+          "fasta_reference": "curated FASTA header: Nlsid-1|accession=JF915743.1|cds_length=1875",
+
+          "ncbi_search_reference": null,
+
+          "source_workbook": null,
+
+          "source_sheet": null,
+
+          "source_row": null,
+
+          "source_information": "existing dsGuard curated target FASTA",
+
+          "notes": null,
+
+          "literature_source": null,
+
+          "function": null,
+
+          "gene_family": null,
+
+          "organism": "Nilaparvata lugens",
+
+          "taxonomy_id": "108931"
+
+        },
+
+        {
+
+          "gene_name": "Nlaub",
+
+          "gene_identifier": null,
+
+          "accession": "JF915742.1",
+
+          "accession_status": "verified",
+
+          "accession_status_source": "existing curated target FASTA",
+
+          "sequence": null,
+
+          "sequence_source": "nilaparvata_lugens_13_cds.fasta",
+
+          "chromosome_or_record": null,
+
+          "start_bp": null,
+
+          "end_bp": null,
+
+          "orientation": null,
+
+          "length_bp": 2085,
+
+          "fasta_reference": "curated FASTA header: Nlaub|accession=JF915742.1|cds_length=2085",
+
+          "ncbi_search_reference": null,
+
+          "source_workbook": null,
+
+          "source_sheet": null,
+
+          "source_row": null,
+
+          "source_information": "existing dsGuard curated target FASTA",
+
+          "notes": null,
+
+          "literature_source": null,
+
+          "function": null,
+
+          "gene_family": null,
+
+          "organism": "Nilaparvata lugens",
+
+          "taxonomy_id": "108931"
+
+        },
+
+        {
+
+          "gene_name": "NlRab2",
+
+          "gene_identifier": null,
+
+          "accession": "KT984796.1",
+
+          "accession_status": "verified",
+
+          "accession_status_source": "existing curated target FASTA",
+
+          "sequence": null,
+
+          "sequence_source": "nilaparvata_lugens_13_cds.fasta",
+
+          "chromosome_or_record": null,
+
+          "start_bp": null,
+
+          "end_bp": null,
+
+          "orientation": null,
+
+          "length_bp": 639,
+
+          "fasta_reference": "curated FASTA header: NlRab2|accession=KT984796.1|cds_length=639",
+
+          "ncbi_search_reference": null,
+
+          "source_workbook": null,
+
+          "source_sheet": null,
+
+          "source_row": null,
+
+          "source_information": "existing dsGuard curated target FASTA",
+
+          "notes": null,
+
+          "literature_source": null,
+
+          "function": null,
+
+          "gene_family": null,
+
+          "organism": "Nilaparvata lugens",
+
+          "taxonomy_id": "108931"
+
+        },
+
+        {
+
+          "gene_name": "NlRab7",
+
+          "gene_identifier": null,
+
+          "accession": "KT984797.1",
+
+          "accession_status": "verified",
+
+          "accession_status_source": "existing curated target FASTA",
+
+          "sequence": null,
+
+          "sequence_source": "nilaparvata_lugens_13_cds.fasta",
+
+          "chromosome_or_record": null,
+
+          "start_bp": null,
+
+          "end_bp": null,
+
+          "orientation": null,
+
+          "length_bp": 621,
+
+          "fasta_reference": "curated FASTA header: NlRab7|accession=KT984797.1|cds_length=621",
+
+          "ncbi_search_reference": null,
+
+          "source_workbook": null,
+
+          "source_sheet": null,
+
+          "source_row": null,
+
+          "source_information": "existing dsGuard curated target FASTA",
+
+          "notes": null,
+
+          "literature_source": null,
+
+          "function": null,
+
+          "gene_family": null,
+
+          "organism": "Nilaparvata lugens",
+
+          "taxonomy_id": "108931"
+
+        },
+
+        {
+
+          "gene_name": "NlRab6",
+
+          "gene_identifier": null,
+
+          "accession": "KT984812.1",
+
+          "accession_status": "verified",
+
+          "accession_status_source": "existing curated target FASTA",
+
+          "sequence": null,
+
+          "sequence_source": "nilaparvata_lugens_13_cds.fasta",
+
+          "chromosome_or_record": null,
+
+          "start_bp": null,
+
+          "end_bp": null,
+
+          "orientation": null,
+
+          "length_bp": 627,
+
+          "fasta_reference": "curated FASTA header: NlRab6|accession=KT984812.1|cds_length=627",
+
+          "ncbi_search_reference": null,
+
+          "source_workbook": null,
+
+          "source_sheet": null,
+
+          "source_row": null,
+
+          "source_information": "existing dsGuard curated target FASTA",
+
+          "notes": null,
+
+          "literature_source": null,
+
+          "function": null,
+
+          "gene_family": null,
+
+          "organism": "Nilaparvata lugens",
+
+          "taxonomy_id": "108931"
+
+        },
+
+        {
+
+          "gene_name": "NlSar1",
+
+          "gene_identifier": null,
+
+          "accession": "KT984793.1",
+
+          "accession_status": "verified",
+
+          "accession_status_source": "existing curated target FASTA",
+
+          "sequence": null,
+
+          "sequence_source": "nilaparvata_lugens_13_cds.fasta",
+
+          "chromosome_or_record": null,
+
+          "start_bp": null,
+
+          "end_bp": null,
+
+          "orientation": null,
+
+          "length_bp": 582,
+
+          "fasta_reference": "curated FASTA header: NlSar1|accession=KT984793.1|cds_length=582",
+
+          "ncbi_search_reference": null,
+
+          "source_workbook": null,
+
+          "source_sheet": null,
+
+          "source_row": null,
+
+          "source_information": "existing dsGuard curated target FASTA",
+
+          "notes": null,
+
+          "literature_source": null,
+
+          "function": null,
+
+          "gene_family": null,
+
+          "organism": "Nilaparvata lugens",
+
+          "taxonomy_id": "108931"
+
+        },
+
+        {
+
+          "gene_name": "NlSRbeta",
+
+          "gene_identifier": null,
+
+          "accession": "KU568374.1",
+
+          "accession_status": "verified",
+
+          "accession_status_source": "existing curated target FASTA",
+
+          "sequence": null,
+
+          "sequence_source": "nilaparvata_lugens_13_cds.fasta",
+
+          "chromosome_or_record": null,
+
+          "start_bp": null,
+
+          "end_bp": null,
+
+          "orientation": null,
+
+          "length_bp": 762,
+
+          "fasta_reference": "curated FASTA header: NlSRbeta|accession=KU568374.1|cds_length=762",
+
+          "ncbi_search_reference": null,
+
+          "source_workbook": null,
+
+          "source_sheet": null,
+
+          "source_row": null,
+
+          "source_information": "existing dsGuard curated target FASTA",
+
+          "notes": null,
+
+          "literature_source": null,
+
+          "function": null,
+
+          "gene_family": null,
+
+          "organism": "Nilaparvata lugens",
+
+          "taxonomy_id": "108931"
+
+        }
+
+      ]
+
+    }
+
+  ]
+
+}
