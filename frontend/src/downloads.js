@@ -47,7 +47,7 @@ export async function downloadFromBackend(url, filename, onError, deps = {}) {
       if (payload?.detail) detail = payload.detail;
 
     } catch {
-
+      void 0;
 
 
     }

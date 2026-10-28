@@ -1033,8 +1033,7 @@ function parseCsv(text) {
       field = "";
 
     } else if (char === "\r") {
-
-
+      continue;
 
     } else if (char === "\n") {
 

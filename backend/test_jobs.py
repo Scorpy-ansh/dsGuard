@@ -13,11 +13,15 @@ from fastapi import HTTPException
 from backend import main
 
 
+def test_fastapi_app_uses_supported_constructor_options():
+    schema = main.app.openapi()
 
+    assert schema["info"]["title"] == "dsGuard API"
+    assert schema["info"]["version"] == "0.3.0"
+    assert schema["openapi"]
 
 
 @pytest.fixture
-
 def deletion_setup(tmp_path):
 
     upload_root = tmp_path / "uploads"

@@ -157,7 +157,6 @@ def test_repeated_runs_are_identical(tmp_path, capsys):
     assert (r1 / "summary.csv").read_bytes() == (r2 / "summary.csv").read_bytes()
 
     assert (r1 / "G1" / "offtarget_ranked.csv").read_bytes() == \
-
         (r2 / "G1" / "offtarget_ranked.csv").read_bytes()
 
 

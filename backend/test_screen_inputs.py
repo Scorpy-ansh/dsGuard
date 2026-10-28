@@ -149,7 +149,6 @@ def test_uploaded_fasta_is_accepted_and_scheduled(screen_env):
 
 
     job_id, target_path, panel_paths, params, input_type, label, skipped = \
-
         scheduled_args(background, worker)
 
     assert job_id == result["job_id"]

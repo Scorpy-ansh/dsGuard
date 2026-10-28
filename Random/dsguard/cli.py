@@ -1975,7 +1975,6 @@ def main(argv=None):
             "rec_hazard", "max_hazard", "hazard_threshold_equivalent_match_bp", "total_hits",
 
             "offtargets_reported", "matches_below_report_floor"] \
-
         + [f"hits_{o}" for o in orgs]
 
     _write_csv(os.path.join(a.out, "summary.csv"), cols,

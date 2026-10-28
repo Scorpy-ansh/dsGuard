@@ -59,7 +59,6 @@ def _extend(query, ref, qi, r, k):
     a = 0
 
     while qi - a - 1 >= 0 and r - a - 1 >= 0 and query[qi - a - 1] < 4 \
-
             and query[qi - a - 1] == ref[r - a - 1]:
 
         a += 1
@@ -67,7 +66,6 @@ def _extend(query, ref, qi, r, k):
     b = k
 
     while qi + b < query.size and r + b < ref.size and query[qi + b] < 4 \
-
             and query[qi + b] == ref[r + b]:
 
         b += 1

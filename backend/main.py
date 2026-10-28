@@ -290,8 +290,6 @@ app = FastAPI(
 
     version="0.3.0",
 
-    openapi_version="3.0.2",
-
 )
 
 
