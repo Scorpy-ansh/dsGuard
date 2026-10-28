@@ -293,18 +293,26 @@ app = FastAPI(
 )
 
 
+def cors_origins(frontend_origin=None):
+    origins = [
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+    ]
+    configured_origin = (
+        os.getenv("FRONTEND_ORIGIN")
+        if frontend_origin is None
+        else frontend_origin
+    )
+    if configured_origin:
+        normalized_origin = configured_origin.strip().rstrip("/")
+        if normalized_origin and normalized_origin not in origins:
+            origins.append(normalized_origin)
+    return origins
+
 
 app.add_middleware(
-
     CORSMiddleware,
-
-    allow_origins=[
-
-        "http://localhost:5173",
-
-        "http://127.0.0.1:5173",
-
-    ],
+    allow_origins=cors_origins(),
 
 
 

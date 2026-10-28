@@ -87,7 +87,7 @@ import {
 import { copyFailureMessage, copyText } from "./clipboard";
 
 import { downloadFromBackend } from "./downloads";
-
+import { getApiBaseUrl } from "./apiConfig";
 import { organismDisplay, organismLabel } from "./organisms";
 
 import {
@@ -108,7 +108,7 @@ import {
 
 
 
-const API = import.meta.env.VITE_API_BASE ?? "http://127.0.0.1:8000";
+const API = getApiBaseUrl();
 
 const API_HOST = API.replace(/^https?:\/\//, "");
 

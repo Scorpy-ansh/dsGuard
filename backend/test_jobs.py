@@ -21,6 +21,14 @@ def test_fastapi_app_uses_supported_constructor_options():
     assert schema["openapi"]
 
 
+def test_cors_origins_include_configured_frontend_origin():
+    assert main.cors_origins("https://dsguard-ui.onrender.com/") == [
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+        "https://dsguard-ui.onrender.com",
+    ]
+
+
 @pytest.fixture
 def deletion_setup(tmp_path):
 
