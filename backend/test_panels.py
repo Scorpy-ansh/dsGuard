@@ -1,11 +1,21 @@
 import hashlib
 
+import io
+
+import urllib.error
+
+from email.message import Message
+
 from backend import main
 
 
 class FakeResponse:
-    def __init__(self, content):
+    def __init__(self, content, url="https://example.invalid/rice.fasta", status=200):
         self.content = content
+        self.status = status
+        self.url = url
+        self.headers = Message()
+        self.headers["Content-Type"] = "application/octet-stream"
 
     def __enter__(self):
         return self
@@ -17,6 +27,13 @@ class FakeResponse:
         content, self.content = self.content, b""
         return content
 
+    def geturl(self):
+        return self.url
+
+
+class InterruptedResponse(FakeResponse):
+    def read(self, _size):
+        raise OSError("connection interrupted")
 
 def test_rice_panel_download_is_verified_and_cached(tmp_path, monkeypatch):
     fasta = b">rice\nACGTACGT\n"
@@ -101,6 +118,88 @@ def test_rice_panel_download_reports_network_failure(tmp_path, monkeypatch):
         assert "Could not download" in str(exc)
     else:
         raise AssertionError("download failure was not reported")
+    assert not list(tmp_path.iterdir())
+
+
+def test_rice_panel_download_reports_http_403_and_response_body(
+    tmp_path, monkeypatch, caplog
+):
+    monkeypatch.setattr(main, "PANEL_CACHE_DIR", tmp_path)
+    monkeypatch.setenv("RICE_PANEL_URL", "https://example.invalid/rice.fasta")
+    monkeypatch.setenv("RICE_PANEL_SHA256", "0" * 64)
+    error = urllib.error.HTTPError(
+        "https://example.invalid/rice.fasta",
+        403,
+        "Forbidden",
+        {"Content-Type": "text/plain"},
+        io.BytesIO(b"blocked by edge policy"),
+    )
+    monkeypatch.setattr(main.urllib.request, "urlopen", lambda *_args, **_kwargs: (_ for _ in ()).throw(error))
+
+    with caplog.at_level("ERROR"):
+        try:
+            main._download_rice_panel()
+        except RuntimeError as exc:
+            assert "HTTP 403" in str(exc)
+        else:
+            raise AssertionError("HTTP 403 was not reported")
+
+    assert "blocked by edge policy" in caplog.text
+    assert "example.invalid/rice.fasta" in caplog.text
+    assert not list(tmp_path.iterdir())
+
+
+def test_rice_panel_download_logs_status_headers_and_redirect(
+    tmp_path, monkeypatch, caplog
+):
+    fasta = b">rice\nACGTACGT\n"
+    monkeypatch.setattr(main, "PANEL_CACHE_DIR", tmp_path)
+    monkeypatch.setenv("RICE_PANEL_URL", "https://example.invalid/rice.fasta")
+    monkeypatch.setenv("RICE_PANEL_SHA256", hashlib.sha256(fasta).hexdigest())
+    response = FakeResponse(
+        fasta,
+        url="https://cdn.example.invalid/rice.fasta",
+    )
+    requests = []
+
+    def open_request(request, **_kwargs):
+        requests.append(request)
+        return response
+
+    monkeypatch.setattr(main.urllib.request, "urlopen", open_request)
+
+    with caplog.at_level("INFO"):
+        path = main._download_rice_panel()
+
+    assert path == tmp_path / "rice.fasta"
+    assert "status=200" in caplog.text
+    assert "content_type=application/octet-stream" in caplog.text
+    assert "method=GET" in caplog.text
+    assert "redirected=True" in caplog.text
+    assert "cdn.example.invalid/rice.fasta" in caplog.text
+    assert requests[0].method == "GET"
+    assert requests[0].get_header("Accept") == "*/*"
+    assert requests[0].get_header("User-agent") == "dsGuard/0.4"
+
+
+def test_rice_panel_download_removes_partial_file_on_interruption(
+    tmp_path, monkeypatch
+):
+    monkeypatch.setattr(main, "PANEL_CACHE_DIR", tmp_path)
+    monkeypatch.setenv("RICE_PANEL_URL", "https://example.invalid/rice.fasta")
+    monkeypatch.setenv("RICE_PANEL_SHA256", "0" * 64)
+    monkeypatch.setattr(
+        main.urllib.request,
+        "urlopen",
+        lambda *_args, **_kwargs: InterruptedResponse(b"partial"),
+    )
+
+    try:
+        main._download_rice_panel()
+    except RuntimeError as exc:
+        assert "Could not download" in str(exc)
+    else:
+        raise AssertionError("interrupted download was not reported")
     assert not list(tmp_path.iterdir())
 
 

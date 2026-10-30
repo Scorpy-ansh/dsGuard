@@ -25,6 +25,8 @@ import uuid
 
 import urllib.parse
 
+import urllib.error
+
 import urllib.request
 
 from datetime import datetime, timezone
@@ -212,6 +214,17 @@ def _sha256(path: Path) -> str:
     return digest.hexdigest()
 
 
+def _url_label(url: str) -> str:
+    parsed = urllib.parse.urlsplit(url)
+    filename = Path(parsed.path).name or "/"
+    return f"{parsed.hostname or '<invalid-host>'}/{filename}"
+
+
+def _sanitised_response_body(body: bytes) -> str:
+    text = body[:500].decode("utf-8", "replace")
+    return "".join(character if character.isprintable() else " " for character in text)
+
+
 def _download_rice_panel() -> Path | None:
     url = os.getenv("RICE_PANEL_URL", "").strip()
     expected_sha256 = os.getenv("RICE_PANEL_SHA256", "").strip().lower()
@@ -228,7 +241,20 @@ def _download_rice_panel() -> Path | None:
     if not url.startswith(("https://", "http://")):
         raise RuntimeError("RICE_PANEL_URL must use HTTP or HTTPS.")
 
-    logger.info("Rice panel download started: url=%s", url)
+    request = urllib.request.Request(
+        url,
+        headers={
+            "Accept": "*/*",
+            "User-Agent": "dsGuard/0.4",
+        },
+        method="GET",
+    )
+    request_label = _url_label(url)
+    logger.info(
+        "Rice panel download started: host_file=%s method=%s",
+        request_label,
+        request.method,
+    )
     PANEL_CACHE_DIR.mkdir(parents=True, exist_ok=True)
     destination = PANEL_CACHE_DIR / PANEL_CATALOG["rice"]["filename"]
     if destination.is_file():
@@ -252,12 +278,43 @@ def _download_rice_panel() -> Path | None:
 
     temporary = PANEL_CACHE_DIR / f".{destination.name}.{os.getpid()}.tmp"
     try:
-        with urllib.request.urlopen(url, timeout=60) as response, temporary.open("wb") as output:
-            while True:
-                chunk = response.read(1024 * 1024)
-                if not chunk:
-                    break
-                output.write(chunk)
+        try:
+            response_context = urllib.request.urlopen(request, timeout=60)
+            with response_context as response, temporary.open("wb") as output:
+                status = getattr(response, "status", None)
+                final_url = response.url
+                content_type = response.headers.get("Content-Type", "")
+                redirected = final_url != url
+                logger.info(
+                    "Rice panel HTTP response: status=%s final_host_file=%s "
+                    "content_type=%s method=%s redirected=%s",
+                    status,
+                    _url_label(final_url),
+                    content_type,
+                    request.method,
+                    redirected,
+                )
+                while True:
+                    chunk = response.read(1024 * 1024)
+                    if not chunk:
+                        break
+                    output.write(chunk)
+        except urllib.error.HTTPError as exc:
+            response_url = exc.url
+            body = _sanitised_response_body(exc.read())
+            logger.error(
+                "Rice panel HTTP response: status=%s final_host_file=%s "
+                "content_type=%s method=%s redirected=%s body=%r",
+                exc.code,
+                _url_label(response_url),
+                exc.headers.get("Content-Type", ""),
+                request.method,
+                response_url != url,
+                body,
+            )
+            raise RuntimeError(
+                f"Rice panel server returned HTTP {exc.code} for {request_label}."
+            ) from exc
         byte_size = temporary.stat().st_size
         logger.info("Rice panel download completed: bytes=%d", byte_size)
         actual_sha256 = _sha256(temporary)
