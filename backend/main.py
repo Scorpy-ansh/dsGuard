@@ -14,6 +14,8 @@ import shutil
 
 import subprocess
 
+import sys
+
 import threading
 
 import uuid
@@ -102,9 +104,6 @@ ROOT = Path(__file__).resolve().parent.parent
 
 ENGINE_DIR = ROOT / "Random"
 
-DSGUARD_EXE = ROOT / ".venv" / "Scripts" / "dsguard.exe"
-
-VENV_PYTHON = ROOT / ".venv" / "Scripts" / "python.exe"
 
 
 
@@ -112,13 +111,9 @@ VENV_PYTHON = ROOT / ".venv" / "Scripts" / "python.exe"
 
 def engine_command() -> list[str] | None:
 
-    if DSGUARD_EXE.is_file():
-
-        return [str(DSGUARD_EXE)]
-
-    if VENV_PYTHON.is_file():
-
-        return [str(VENV_PYTHON), "-m", "dsguard"]
+    interpreter = Path(sys.executable)
+    if interpreter.is_file():
+        return [str(interpreter), "-m", "dsguard"]
 
     return None
 
@@ -568,9 +563,7 @@ def run_screening(
 
             raise RuntimeError(
 
-                "dsGuard CLI was not found. Expected "
-
-                f"{DSGUARD_EXE} or {VENV_PYTHON} (run 'pip install -e .' in Random/)."
+                "The Python interpreter running the backend is not available."
 
             )
 
@@ -1482,9 +1475,8 @@ async def create_screening_job(
 
             detail=(
 
-                "The dsGuard CLI was not found, so screening cannot run. "
-
-                f"Expected {DSGUARD_EXE} or {VENV_PYTHON}."
+                "The dsGuard CLI was not found because the Python interpreter "
+                "running the backend is not available, so screening cannot run."
 
             ),
 
