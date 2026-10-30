@@ -1,10 +1,13 @@
 
 
 import csv
+import hashlib
 
 import io
 
 import json
+
+import logging
 
 import os
 
@@ -59,6 +62,8 @@ from pymongo import MongoClient
 from pymongo.errors import PyMongoError
 
 
+logger = logging.getLogger("dsguard.backend")
+
 
 try:
 
@@ -104,17 +109,12 @@ ROOT = Path(__file__).resolve().parent.parent
 
 ENGINE_DIR = ROOT / "Random"
 
-
-
-
-
+load_dotenv(ROOT / ".env")
 
 def engine_command() -> list[str] | None:
-
     interpreter = Path(sys.executable)
     if interpreter.is_file():
         return [str(interpreter), "-m", "dsguard"]
-
     return None
 
 
@@ -130,21 +130,259 @@ TARGET_CATALOG_PATH = ROOT / "Random" / "data" / "targets" / "target_catalog.jso
 
 
 PANEL_DIR = Path(os.getenv("DSGUARD_PANEL_DIR", str(ROOT / "reference_panels"))).resolve()
-
+PANEL_CACHE_DIR = Path(
+    os.getenv("DSGUARD_PANEL_CACHE_DIR", str(ROOT / ".cache" / "reference_panels"))
+).resolve()
 PANEL_CATALOG = {
 
-    "rice": {"label": "Rice (Oryza sativa)", "filename": "rice.fasta"},
+    "rice": {
+        "label": "Rice (Oryza sativa)",
+        "organism": "Oryza sativa",
+        "filename": "rice.fasta",
+    },
 
-    "cyrtorhinus_lividipennis": {"label": "Cyrtorhinus lividipennis", "filename": "cyrtorhinus_lividipennis.fasta"},
+    "cyrtorhinus_lividipennis": {
+        "label": "Cyrtorhinus lividipennis",
+        "organism": "Cyrtorhinus lividipennis",
+        "filename": "cyrtorhinus_lividipennis.fasta",
+    },
 
-    "honeybee": {"label": "Honeybee (Apis mellifera)", "filename": "honeybee.fasta"},
+    "honeybee": {
+        "label": "Honeybee (Apis mellifera)",
+        "organism": "Apis mellifera",
+        "filename": "honeybee.fasta",
+    },
 
-    "spider": {"label": "Spider (reference species panel)", "filename": "spider.fasta"},
+    "spider": {
+        "label": "Spider (reference species panel)",
+        "organism": "reference spider species",
+        "filename": "spider.fasta",
+    },
 
 }
 
+_PANEL_STATE_LOCK = threading.Lock()
+_PANEL_STATES: dict[str, dict] = {}
 
 
+def _panel_state_key(name: str) -> tuple[str, str, str, str, str]:
+    return (
+        name,
+        str(PANEL_DIR),
+        str(PANEL_CACHE_DIR),
+        os.getenv("RICE_PANEL_URL", ""),
+        os.getenv("RICE_PANEL_SHA256", ""),
+    )
+
+
+def _validate_fasta(path: Path) -> None:
+    record_count = 0
+    sequence_length = 0
+    header_seen = False
+
+    with path.open("rb") as handle:
+        for line_number, raw_line in enumerate(handle, start=1):
+            line = raw_line.strip()
+            if not line:
+                continue
+            if line.startswith(b">"):
+                if len(line) == 1:
+                    raise ValueError(f"FASTA header is missing a name at line {line_number}.")
+                if header_seen and sequence_length == 0:
+                    raise ValueError(f"FASTA record has no sequence before line {line_number}.")
+                header_seen = True
+                record_count += 1
+                sequence_length = 0
+                continue
+            if not header_seen:
+                raise ValueError(
+                    f"FASTA sequence data appears before the first header at line {line_number}."
+                )
+            sequence_length += len(line.replace(b" ", b"").replace(b"\t", b""))
+
+    if not header_seen or sequence_length == 0:
+        raise ValueError("FASTA contains no non-empty sequence records.")
+
+
+def _sha256(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
+def _download_rice_panel() -> Path | None:
+    url = os.getenv("RICE_PANEL_URL", "").strip()
+    expected_sha256 = os.getenv("RICE_PANEL_SHA256", "").strip().lower()
+    if not url or not expected_sha256:
+        logger.warning(
+            "Rice panel configuration is incomplete: RICE_PANEL_URL and "
+            "RICE_PANEL_SHA256 are required."
+        )
+        return None
+    if len(expected_sha256) != 64 or any(
+        character not in "0123456789abcdef" for character in expected_sha256
+    ):
+        raise RuntimeError("RICE_PANEL_SHA256 must be a 64-character hexadecimal SHA-256 checksum.")
+    if not url.startswith(("https://", "http://")):
+        raise RuntimeError("RICE_PANEL_URL must use HTTP or HTTPS.")
+
+    logger.info("Rice panel download started: url=%s", url)
+    PANEL_CACHE_DIR.mkdir(parents=True, exist_ok=True)
+    destination = PANEL_CACHE_DIR / PANEL_CATALOG["rice"]["filename"]
+    if destination.is_file():
+        actual_sha256 = _sha256(destination)
+        if actual_sha256 == expected_sha256:
+            try:
+                _validate_fasta(destination)
+            except (OSError, ValueError):
+                logger.warning("Rice panel cached FASTA validation failed: path=%s", destination)
+                destination.unlink(missing_ok=True)
+            else:
+                logger.info("Rice panel checksum verification passed: sha256=%s", actual_sha256)
+                logger.info("Rice panel cache reused: path=%s bytes=%d", destination, destination.stat().st_size)
+                return destination
+        else:
+            logger.error(
+                "Rice panel checksum verification failed: expected=%s actual=%s",
+                expected_sha256,
+                actual_sha256,
+            )
+
+    temporary = PANEL_CACHE_DIR / f".{destination.name}.{os.getpid()}.tmp"
+    try:
+        with urllib.request.urlopen(url, timeout=60) as response, temporary.open("wb") as output:
+            while True:
+                chunk = response.read(1024 * 1024)
+                if not chunk:
+                    break
+                output.write(chunk)
+        byte_size = temporary.stat().st_size
+        logger.info("Rice panel download completed: bytes=%d", byte_size)
+        actual_sha256 = _sha256(temporary)
+        if actual_sha256 != expected_sha256:
+            logger.error(
+                "Rice panel checksum verification failed: expected=%s actual=%s",
+                expected_sha256,
+                actual_sha256,
+            )
+            raise RuntimeError("Downloaded Rice panel failed the RICE_PANEL_SHA256 check.")
+        logger.info("Rice panel checksum verification passed: sha256=%s", actual_sha256)
+        _validate_fasta(temporary)
+        logger.info("Rice panel FASTA validation passed: path=%s", temporary)
+        temporary.replace(destination)
+        logger.info("Rice panel installed: path=%s bytes=%d", destination, byte_size)
+        return destination
+    except Exception as exc:
+        temporary.unlink(missing_ok=True)
+        logger.error("Rice panel reference-loading failure: %s", exc)
+        if isinstance(exc, RuntimeError):
+            raise
+        raise RuntimeError(f"Could not download the Rice reference panel: {exc}") from exc
+
+
+def panel_path(name: str) -> Path | None:
+    config = PANEL_CATALOG[name]
+    local_path = PANEL_DIR / config["filename"]
+    if local_path.is_file() and local_path.stat().st_size > 0:
+        return local_path
+    if name == "rice":
+        return _download_rice_panel()
+    return None
+
+
+def _panel_status(name: str, path: Path | None, reason: str | None = None) -> dict:
+    config = PANEL_CATALOG[name]
+    exists = bool(path and path.is_file())
+    size = path.stat().st_size if exists else 0
+    status = _PANEL_STATES.get(name, {})
+    return {
+        "key": name,
+        "name": config["label"],
+        "label": config["label"],
+        "organism": config["organism"],
+        "installed": bool(status.get("installed", exists and size > 0)),
+        "available": bool(status.get("installed", exists and size > 0)),
+        "file_exists": exists,
+        "validation_status": status.get("validation_status", "not_checked"),
+        "last_validation_result": status.get("last_validation_result", reason),
+        "filename": config["filename"],
+        "path": str(path) if path else None,
+        "size_bytes": size,
+        "reason": reason,
+    }
+
+
+def ensure_panel(name: str) -> Path | None:
+    with _PANEL_STATE_LOCK:
+        existing = _PANEL_STATES.get(name)
+        if existing is not None and existing.get("state_key") == _panel_state_key(name):
+            return existing.get("path")
+
+        config = PANEL_CATALOG[name]
+        candidate = PANEL_DIR / config["filename"]
+        if name != "rice":
+            try:
+                installed = candidate.is_file() and candidate.stat().st_size > 0
+                if installed:
+                    _validate_fasta(candidate)
+                validation_status = "passed" if installed else "not_checked"
+                validation_result = "FASTA validation passed" if installed else None
+            except (OSError, ValueError) as exc:
+                installed = False
+                validation_status = "failed"
+                validation_result = str(exc)
+            _PANEL_STATES[name] = {
+                "path": candidate if (installed or candidate.exists()) else None,
+                "installed": installed,
+                "validation_status": validation_status,
+                "last_validation_result": validation_result,
+                "state_key": _panel_state_key(name),
+            }
+            logger.info("Panel availability: name=%s installed=%s path=%s", name, installed, candidate)
+            return candidate if installed else None
+
+        try:
+            path = candidate if candidate.is_file() and candidate.stat().st_size > 0 else None
+            if path is None:
+                cached = PANEL_CACHE_DIR / config["filename"]
+                path = cached if cached.is_file() and cached.stat().st_size > 0 else None
+            if path is None:
+                path = _download_rice_panel()
+            if path is None:
+                reason = "Rice panel configuration is missing."
+                _PANEL_STATES[name] = {
+                    "path": path if path and path.exists() else None,
+                    "installed": False,
+                    "validation_status": "not_checked",
+                    "last_validation_result": reason,
+                    "state_key": _panel_state_key(name),
+                }
+                logger.warning("Panel availability: name=%s installed=false reason=%s", name, reason)
+                return None
+
+            _validate_fasta(path)
+            _PANEL_STATES[name] = {
+                "path": path,
+                "installed": True,
+                "validation_status": "passed",
+                "last_validation_result": "FASTA validation passed",
+                "state_key": _panel_state_key(name),
+            }
+            logger.info("Panel availability: name=%s installed=true path=%s", name, path)
+            return path
+        except (OSError, ValueError, RuntimeError) as exc:
+            reason = str(exc)
+            _PANEL_STATES[name] = {
+                "path": path if path and path.exists() else candidate if candidate.exists() else None,
+                "installed": False,
+                "validation_status": "failed",
+                "last_validation_result": reason,
+                "state_key": _panel_state_key(name),
+            }
+            logger.error("Reference-loading failure: name=%s reason=%s", name, reason)
+            return None
 
 
 def load_target_catalog() -> dict:
@@ -234,10 +472,6 @@ if {str(item.get("key", "")).lower() for item in TARGET_CATALOG["organisms"]} !=
 WINDOW_MIN = 21
 
 WINDOW_MAX = 501
-
-
-
-load_dotenv(ROOT / ".env")
 
 
 
@@ -900,46 +1134,17 @@ def list_reference_panels():
     panels = []
 
     for key, config in PANEL_CATALOG.items():
-
-        path = PANEL_DIR / config["filename"]
-
-        exists = path.is_file()
-
-        size = path.stat().st_size if exists else 0
-
-        panels.append({
-
-            "key": key,
-
-            "label": config["label"],
-
-            "available": bool(exists and size > 0),
-
-            "filename": config["filename"],
-
-            "path": str(path),
-
-            "size_bytes": size,
-
-            "reason": (
-
-                None if (exists and size > 0)
-
-                else (
-
-                    f"{path} is empty."
-
-                    if exists else
-
-                    f"{path} was not found. Place '{config['filename']}' in "
-
-                    f"{PANEL_DIR} or set DSGUARD_PANEL_DIR."
-
+        path = ensure_panel(key)
+        state_path = _PANEL_STATES.get(key, {}).get("path")
+        if path is None:
+            reason = _PANEL_STATES.get(key, {}).get("last_validation_result")
+            if not reason:
+                reason = (
+                    f"{PANEL_DIR / config['filename']} was not found or is empty."
                 )
-
-            ),
-
-        })
+        else:
+            reason = None
+        panels.append(_panel_status(key, path or state_path, reason))
 
     return panels
 
@@ -1557,25 +1762,26 @@ async def create_screening_job(
     skipped_panels: list[tuple[str, str]] = []
 
     for name in requested:
-
         config = PANEL_CATALOG[name]
-
-        path = PANEL_DIR / config["filename"]
-
-        size = path.stat().st_size if path.is_file() else 0
-
-        if not path.is_file() or size <= 0:
-
+        reason = None
+        try:
+            path = ensure_panel(name)
+        except RuntimeError as exc:
+            path = None
+            reason = str(exc)
+        if path is None:
+            if name == "rice" and reason is None:
+                reason = (
+                    "Rice panel is unavailable. Set RICE_PANEL_URL and "
+                    "RICE_PANEL_SHA256 or install rice.fasta locally."
+                )
             skipped_panels.append((
-
                 name,
-
-                f"{path} was not found or is empty" if not path.is_file() else f"{path} is empty",
-
+                reason or (
+                    f"{PANEL_DIR / config['filename']} was not found or is empty"
+                ),
             ))
-
         else:
-
             panel_paths.append((name, path))
 
 
